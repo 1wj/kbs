@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Release Note</title>
+  <style type="text/css">
+    body{
+      font-family: tahoma, arial, STXihei, '华文细黑', 'Microsoft YaHei', '微软雅黑', \5FAE\8F6F\96C5\9ED1;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .version-deprecated {
+    	text-decoration: line-through;
+    }
+    .release h1{
+      color: #712d75;
+      padding: 0;
+      margin: 0;
+    }
+    .release h2{
+      color: #369;
+      font-size: 1.4em;
+      border-top: 1px solid #d2d2d2;
+      padding-left: 20px;
+      padding-top: 8px;
+      margin-bottom: 0;
+    }
+    .release li{
+      color: #66595c;
+    }
+    .release li a{
+      color: #712d75;
+    }
+	.release table{
+	  background-color:black;
+	}
+	.release th{
+	  background-color:white;
+	}
+	.release td{
+	  background-color:white;
+	}
+	.releaseNoteParamsHintLabel {
+	    border: 1px solid #8cca75;
+        font-size: 9px;
+        margin: 0px 0px 0px 3px;
+        padding: 0px 3px 0px 3px;
+        color: white;
+        background: #4CAF50;
+	}
+	.releaseNoteAltersHintLabel {
+        border: 1px solid #d2ce7b;
+        font-size: 9px;
+        margin: 3px;
+        padding: 0px 3px 0px 3px;
+        color: black;
+        background: yellow;
+	}
+	.releaseNoteDetail {
+	    font-size: 11px;
+	    margin-left: 5px;
+        cursor: pointer;
+	}
+	.releaseNoteDetail:hover {
+        color: blue;
+	}
+	.releaseNoteDetail + span {
+	    display: block;
+	    color: blue;
+	    margin-left:10px;
+	}
+	.releaseNoteDetail + span[hideMe] {
+	    display: none;
+	    color: blue;
+	}
+	.releaseNoteParametersTable,.releaseNoteAltersTable {
+	    color: black;
+	}
+    .releaseNoteParametersTable th {
+	    background-color:lightgreen;
+	}
+    .releaseNoteAltersTable th {
+	    background-color:lightyellow;
+	}
+
+  </style>
+  <script type="text/javascript">
+		function getReleaseNotesNew(){
+			var versions = [];
+  			var versionInfo;
+  			var releaseNote;
+  			
+  			//createReleaseNoteNew(arg1, arg2)
+            //arg1:修改功能說明
+            //arg2:1=新功能或是優化功能；2=代碼bug修正。
+            <!--develop-->
+
+			versionInfo = createVersionNew('2022-01-13', '4.1.0.1004');
+
+			versionInfo.createReleaseNote('修正 DWJsonConfig Boolean 字段為 null 問題', 2);
+			versionInfo.createReleaseNote('修正 DWHttpClient 依賴 dw-json-config 問題', 2);
+			versionInfo.createReleaseNote('修正服務器啟動自動註冊Eai失敗, 取重試配置問題', 2);
+
+			versions.push(versionInfo);
+
+			versionInfo = createVersionNew('2022-01-13', '4.1.0.1003');
+            versionInfo.createReleaseNote('記錄EAI服務非預期異常堆棧', 1);
+            versionInfo.createReleaseNote('加上EAI自動註冊依賴dw-json-config Bean問題', 2);
+            versionInfo.createReleaseNote('修正 PropertySource 順序問題, 修正後環境變數已經不會覆蓋平台/應用層配置', 2);
+            versionInfo.createReleaseNote('修正DWHttpClient請求配置讀取錯誤的問題', 2);
+            versionInfo.createReleaseNote('操作日誌:修正服務上下文資料清除的問題,並優化操作日誌上下文', 2);
+            versions.push(versionInfo);
+            
+			versionInfo = createVersionNew('2022-01-06', '4.1.0.1002');
+			versionInfo.createReleaseNote('處理使用DWNumberProcessor的時候，序列化器沒有取配置的日期格式的問題', 2);
+			versions.push(versionInfo);
+
+			versionInfo = createVersionNew('2022-01-04', '4.1.0.1001');
+			versionInfo.createReleaseNote('DocumentId取號修改:修正 DocumentIdFinder查詢數據庫時，無法傳入option非租戶。DocumentSetting 增加tenant配置項', 2);
+			versionInfo.createReleaseNote('DWServiceStandardResult類中response字段null轉空字串的处理', 2)
+                .addParameter('dap.json.standard-result-null-to-empty-str', '默認值為true，可選值：true，false');
+            versions.push(versionInfo);
+
+			versionInfo = createVersionNew('2021-12-30', '4.1.0.1000');
+						
+			versionInfo.createReleaseNote('EAI組件', 1)
+				.addDetail('調整互聯中台服務參數篩選規則，不過濾是否為digi-開頭');
+			
+			versionInfo.createReleaseNote('服務調用鏈組件', 1)
+				.addDetail('調整digi-callback-parent-digi-reqid至digi-callback-parent-reqid')
+				.addDetail('增加服務調用鍊Session Id信息紀錄功能，<span style="color:red">平台引入 spring-boot-starter-amqp, 模組中有使用此 starter 引入的相關 jar, 請移除模組中對應的jar後驗證')
+				.addParameter('dwServiceChainEnabled', '是否啟用服務調用鍊紀錄功能，默認值為false')
+			    .addParameter('dwServiceChainCustomId', '是否使用自訂Id，默認使用appId')
+			    .addParameter('dwServiceChainReceivedPrinterType', '設定為full時在接收信息時打印出全部調用鍊，其他值只打印出上一層信息');
+			
+			versionInfo.createReleaseNote('依賴組件異動', 1)
+				.addDetail('移除DWService-Restry註冊中心')
+				.addDetail('平台移除過時的模組 dwapiplatform-server');
+			
+			versionInfo.createReleaseNote('排程組件', 1)
+				.addDetail('schedule_type排程类型为4，在新增场景下无需触发misfire，其余场景需要正常触发misfire机制');
+			
+			versionInfo.createReleaseNote('數據持久化組件', 1)
+				.addDetail('新增DWQueryInfo支持GROUPBY查詢')
+				.addDetail('新增DAO 支持非主鍵刪除')
+				.addDetail('join功能增加支持表別名功能')
+				.addDetail('支持union語句')
+				.addDetail('增加使用非主鍵更新功能')				
+				.addDetail('選項增加指定表名停用加上多租戶條件')
+				.addDetail('<span style=\"color:blue\"><b>DWDao 分頁查詢總筆數SQL調整</b></span></br><span style=\"color:red\"><b>  注意事項: 此改動將影響原有 select * 且 join 表有相同字段的語句，會發生模糊字段問題，請修正代碼明確 select 出同名的字段(加上表名)</b></span>')
+				.addDetail('DWDataSet數據操作支持字段值產生器，平台支持UUID產生器，應用可自行實現字段值產生器');
+					
+			versionInfo.createReleaseNote('數據持久化組件-新增查詢返回自定義POJO類的相關方法', 1)				
+				.addDetail('&lt;T&gt; List&lt;T&gt; select(Class&lt;T&gt;, DWQueryInfo, DWDataSetOperationOption)，查詢列表')
+			    .addDetail('&lt;T&gt; T selectOne(Class&lt;T&gt;, DWQueryInfo, DWDataSetOperationOption)，查詢單筆')
+			    .addDetail('&lt;T&gt; DWPaginationQueryBeanResult&lt;T&gt; selectWithPage(Class&lt;T&gt;, DWPagableQueryInfo, DWDataSetOperationOption)，分頁查詢')
+                .addParameter('dwDaoUnderScoreToCamelCase', '查詢時，數據庫欄位底線轉換成駝峰命名方式對應JavaBean的屬性，例如：`user_id` 轉成 userId，默認值為true');
+				
+			versionInfo.createReleaseNote('數據持久化組件-增加子查詢功能', 1)
+                .addDetail('1.select [子查詢] from table')
+                .addDetail('2.select * from [子查詢]')
+                .addDetail('3.select * from table where field 操作符(如 =) [子查詢]')
+                .addDetail('4.select * from table join [子查詢]')
+                .addDetail('5.select * from table exists [子查詢]')
+                .addDetail('6.select * from table not exists [子查詢]')
+                .addDetail('7.insert into table [子查詢]')
+                .addDetail('8.insert into table(f1, f2) values(value1, [子查詢])')
+                .addDetail('9.update table set f1=value1, set f2=[子查詢]');	
+				
+			versionInfo.createReleaseNote('DWIAM組件-增加調用IAM接口：', 1)
+			    .addDetail('IAMUserInfoService，實現對 /api/iam/v2/user 調用的封裝')
+			    .addDetail('IAMUserAllInfoService，實現對 /api/iam/v2/query/user/allinfo 調用的封裝')
+			    .addParameter('iamUrlUserAllInfo', '/api/iam/v2/query/user/allinfo 對應的key');	
+			
+			versionInfo.createReleaseNote('DWJson組件-新增registerTypeTokenAdapter(TypeToken , Object)方法, 支援應用註冊自定義TypeAdapter', 1);
+			
+			versionInfo.createReleaseNote('DWJson組件-增加null值輸出配置', 1)
+                .addParameter('dwJsonSerializeNulls(舊)或dap.json.serialize-null(新)', 'null值輸出配置，默認值：false，可選值：true，false');
+			
+			versionInfo.createReleaseNote('DWJson組件-增加json反序列化時空字串轉null支持', 1)
+                .addParameter('dwJsonEmptyStrToNullEnabled(舊)或dap.json.deserialize-empty-str-to-null(新)', '空字串轉null支持的開關，默認值為false');
+				
+			versionInfo.createReleaseNote('DWJson組件-增加json反序列化Object型別時遇到Number型別時的處理方式，平台實作Gson反序列化Object型別中Number的處理器', 1)
+                .addParameter('dap.json.number-processor-name', '默認值：空字串，可選值：int，double，decimal，string，default');
+
+			versionInfo.createReleaseNote('DWJson組件-增加json日期格式全局配置與反序列化時服務定制日期格式功能', 1)
+				.addDetail('全局配置為dap.json.dateformat(舊)或dap.json.date-time-format(新)')
+				.addDetail('服務定制為DWServiceContext.getContext().set(DWGsonProvider.DESERIALIZATION_DATEFORMAT, dateFormat)')
+                .addParameter('dap.json.dateformat(舊)或dap.json.date-time-format(新)', '默認值為yyyy/MM/dd HH:mm:ss');
+
+			versionInfo.createReleaseNote('DWJson組件-抽取JSON處理常用配置參數，配置參數的優先序為 舊的配置項 > 新的配置項 > 平台默認配置', 1);
+				
+			versionInfo.createReleaseNote('微服務框架', 1)
+				.addDetail('增加Token filter、Allow anonymous filter抽象類，支持自動配置定義客制化filter')
+				.addDetail('集成模組jdbc DataSource、Spring RabbitTemplate、Spring MongoTemplate、Spring RedisConnectionFactory 和 Neo4j SessionFactory Bean健康檢查指標')
+				.addDetail('服務調用接口參數個數為1時，支持傳入json格式不須指定參數名稱')
+				.addDetail('增加@DWRequestMapping注解在類上標注的支持');
+			
+			versionInfo.createReleaseNote('取號組件', 1)
+				.addDetail('調整DocumentID取號邏輯 流水號支持日期自定義pattern，以及支持增加後綴');
+								
+			versionInfo.createReleaseNote('新增操作日誌功能', 1)
+                .addDetail('在接口方法上加上註釋(annotation),例如<br/>@Override<br/>\@DWLogOperation(desc = "依id取得訂單")<br/>public Object getOrderById(String id)')
+                .addParameter('dap.dwlog.operation.enabled', '是否啟用操作日誌(application.properties)')
+                .addParameter('dap.dwlog.operation.logSqlEnabled', '是否紀錄sql語句(application.properties)')
+                .addParameter('dap.dwlog.operation.logErrorEnabled', '是否紀錄異常(application.properties)')
+                .addParameter('dap.dwlog.operation.datasource.DriverClassName=org.mariadb.jdbc.Driver(例)<br/>dap.dwlog.operation.datasource.url=jdbc:mariadb://127.0.0.1:3306/myDb(例)<br/>dap.dwlog.operation.datasource.username=mydev(例)<br/>dap.dwlog.operation.datasource.password=Z134(例)<br/>.', '1.當dap.dwlog.operation.enabled=true,此處需要配置<br/>2.這四項為必要配置<br/>3.若需要其他配置,最後一個名稱只要符合 DataSource的filed name,自動綁定值,例如maxTotal/minIdle...等')
+				.addParameter('dap.dwlog.operation.writer.thread.corePoolSize=5(例)<br/>dap.dwlog.operation.writer.thread.maximumPoolSize=20(例)<br/>dap.dwlog.operation.writer.thread.keepAliveTime=30000(例)<br/>dap.dwlog.operation.writer.thread.workQueueSize=10(例)<br/>', '1.核心池大小,預設 5<br/>2.池的最大值,預設 20<br/>3.執行緒最大空閒時間,預設 30000 (毫秒)<br/>4.允許排隊的數量(可等待執行的job數),預設 10<br/>')
+                ;	
+			versionInfo.createReleaseNote('移動初始化事件中請求移動API失敗時打印ERROR級別日誌', 2);
+			
+			versionInfo.createReleaseNote('數據持久化', 2)
+				.addDetail('DWQueryInfo操作setSelectFields方法時，修正傳入一個字串內容為多個字段名稱時，會導致DWDataRow的字段值不正確')
+				.addDetail('DWQueryInfo操作setSelectFields方法時，修正傳入字段內容有DATE_FORMAT(order_date, %Y-%m-%d) AS order_datet格式時，產生的SQL會不正確')
+				.addDetail('修改DAO級聯刪除校驗提示不支持除字符串以外的數據類型');
+			
+			versionInfo.createReleaseNote('微服務框架', 2)
+				.addDetail('修正傳入innerToken時，服務上下文遺失token的問題')
+				.addDetail('修正@Value($xxx.xx)取不到配置錯誤');
+			
+			versionInfo.createReleaseNote('EAI組件-修正 eai中传递routerKey时，无法获取到驼峰格式的routerKey信息', 2);
+            versionInfo.createReleaseNote('修正當dwJsonEmptyStrToNullEnabled=true時，平台啟動拋NoSuchMethodError異常的問題', 2)
+			    .addDetail('修改模組DWApolloReplica、DWDAO、DWDAO.Serializer、DWEAI、DWIAM、DWJSON、DWPersistconn以及DWModulesTemplate中依賴的 gson 成 dwapiplatform-gson');			
+			versionInfo.createReleaseNote('Log4j 2.11.2版本安全漏洞更新', 2)
+                .addDetail('漏洞詳情 https://help.aliyun.com/noticelist/articleid/1060971232.html');
+			versionInfo.createReleaseNote('排程自動配置不正確，導致DWQuartzJobListener拋null point exception', 2);
+						
+			versions.push(versionInfo);
+						
+			versionInfo = createVersionNew('2021-09-30', '4.0.1.1000');
+			versionInfo.createReleaseNote('新增分散式排程', 1);
+            versionInfo.createReleaseNote('禪道Bug#3169 eai集成调用接口后返回值多包了一层std_data', 2);
+			versionInfo.createReleaseNote('新增禪道需求#1814 排程更新/啟停用API執行順序問題', '1')
+			    .addDetail('DWSys IScheduleService增加updateScheduleExcludeEnableStatus方法')
+			    .addDetail('DWScheduleContext增加updateScheduleExcludeEnableStatus方法')
+			    .addDetail('以上兩個方法只更新排程數據不更新狀態');
+            versionInfo.createReleaseNote('禪道Bug#3160 上传文件报错：StackOverflowError', 2)
+			    .addDetail('配置:platform/conf/serializer.xml 增加 DWFile 序列化器Bean')
+			    .addDetail('<span style="color:red">DWFile再次序列化->反序列化後, 會產生內存使用過多的問題, 不建議這樣使用</span>');
+			versionInfo.createReleaseNote('管理字段tag增加設定別名的功能，請參考開發手冊9.7.4章節說明', 1);
+			versionInfo.createReleaseNote('開發工具', '2')
+			    .addDetail('修正app id帶有中劃線時，產生服務模組package name丟失模組名稱問題')
+			    .addDetail('修正升級平台時，本地platform.properties配置值丟失問題');
+			versionInfo.createReleaseNote('禪道Bug#3160 上传文件报错：StackOverflowError - 少序列化 file name 問題', '2');
+			versionInfo.createReleaseNote('禪道需求#1880 请求返回中可以不出现debugInfo的信息', '1')
+			    .addParameter('dwExceptionOutputDebugInfo' ,'預設值將在異常回應裡輸出DebugInfo字段，設定為false值表示不輸出該字段');
+			versionInfo.createReleaseNote('禪道Bug#3247 分庫:修正資料庫取配置為初始化問題', 2);
+			versionInfo.createReleaseNote('修正日志保留天數功能失效', 2);
+			versionInfo.createReleaseNote('platform/conf/platform.properties 中的 accessControlAllowHeaders 配置參數增加 routerKey', 1);
+            versionInfo.createReleaseNote('互聯中台服務調用全異步服務', 1)
+    			.addDetail('同步調全異步')
+        		.addDetail('全異步調全異步');
+			versionInfo.createReleaseNote('取消臨時方案邏輯，調用方Cookies有router key時，與profile tenant sid匹配檢查', 2);
+			versionInfo.createReleaseNote('打包樣版優化，避免編譯與打包時平台版本不一致', 1);
+			versionInfo.createReleaseNote('dw_rdbms_fields的field type增加支持nvarchar', 1);
+			versions.push(versionInfo);
+
+			
+			versionInfo = createVersionNew('2021-07-30', '4.0.0.1000');
+			versionInfo.createReleaseNote('EAI服務自動註冊到CROSS功能', '1');
+			versionInfo.createReleaseNote('系統級微服務-API回傳訊息支持多語', '1');
+			versionInfo.createReleaseNote('EAI', '1')
+				.addDetail('整合EAI服務方全異步功能')
+			    .addDetail('支持服務回參可自定義digi-srvcode');
+			
+			versionInfo.createReleaseNote('日志', '1')
+				.addDetail('log4j2.xml容錯，@logFileReservedDay@未取代時，預設值7d')
+				.addDetail('log4j2.xml容錯，@logLevel@未取代時，預設值INFO');
+			
+			versionInfo.createReleaseNote('數據持久化', '1')				
+				.addDetail('數據表管理字段增加新增、修改操作約束，當mgmtFieldIgnoreCustomValue設定為false時，新增時不能帶更新的管理字段;更新時不能帶新增的管理字段。<br/>如果設定了，將會被組件從DWDataRow中移除', '1')			    
+			    .addParameter('mgmtFieldIgnoreCustomValue' ,'預設值為true。');
+			
+			versionInfo.createReleaseNote('配置中心', '1')				
+				.addDetail('支持配置中心定制版本訊息', '1')
+				.addParameter('CUSTOM_APPIMAGENAME', '客製化配置中心namespace，默認值為空')
+				.addParameter('CUSTOM_PLATFORM', '客製化平台版本，默認值為空')
+			    .addParameter('CUSTOM_SMALLVERSION', '客製化應用版本');	
+			
+			//versionInfo.createReleaseNote('微服務組件-支持http request請求，content type為application/xml類型', '1');
+			versionInfo.createReleaseNote('微服務組件-平台服務容器優化', '1')				
+			    .addDetail('1.DWContainer')
+			    .addDetail('&emsp;1.1.調用服務前切換線程ClassLoader邏輯移至DWModuleServiceInvocationProcessor')
+			    .addDetail('&emsp;1.2.移除isDWMethodAllowAnonymous方法 - 改為使用DWMethod allowAnonymous方法')
+                .addDetail('&emsp;1.3.移除getDWRestfulMethod方法 - 改為使用改為使用DWRestfulHeaderRepository getDWRestfulMethod方法')
+                .addDetail('&emsp;1.4.移除invokeRestful方法 - 改為傳調用getAPI傳入DWRestfulServiceLocationInfo取得DWTargetAPI之後, 再調用invoke方法')
+			    .addDetail('&emsp;1.5.移除getEaiServiceList方法 - 改為使用DWEAIHeaderRepository getEaiServiceIdList方法')
+			    .addDetail('&emsp;1.6.移除getEaiServiceHeader方法 - 改為使用改為使用DWEAIHeaderRepository getEaiServiceHeader方法')
+                .addDetail('&emsp;1.7.移除getEaiServiceMethod方法 - 改為使用改為使用DWEAIHeaderRepository getEaiServiceMethod方法')
+			    .addDetail('&emsp;1.8.移除getEaiCallbackHeader方法 - 改為使用改為使用DWEAIHeaderRepository getEaiCallbackHeader方法')
+                .addDetail('&emsp;1.9.移除getEaiCallbackMethod方法 - 改為使用改為使用DWEAIHeaderRepository getEaiCallbackMethod方法')
+                .addDetail('&emsp;1.10.移除invokeEai方法 - 改為傳調用getAPI傳入DWEAIServiceLocationInfo取得DWTargetAPI之後, 再調用invoke方法')
+			    .addDetail('2.platform\conf\container-context.xml內容增加DWModuleServiceInvocationProcessor設定')
+			    .addDetail('3.platform\conf\platform.properties中的platformSpringConfigFileNames移除加載container-context.xml')
+			    .addDetail('4.增加DWContainerAutoConfiguration自動配置類取代container-context.xml')
+			    .addDetail('5.FilterConfiguration內部配置類改為自動配置類，並且於於DWContainerAutoConfiguration之後加載')
+			    .addDetail('6.微服務拆分出 定義、搜尋、服務容器、服務定位、請求執行邏輯，增加Standard Restful、EAI服務容器')
+			    .addDetail('<span style="color:red">註:當platformSpringConfigFileNames沒有移除container-context.xml時，DWContainerAutoConfiguration自動配置不啟用</span>')
+                .addDetail('7.移除 DWTracing 組件(若 pom.xml 有依賴dwapiplatform-tracing，請手動移除)')
+                .addDetail('&emsp;<span style="color:red">註:若 pom.xml 有依賴dwapiplatform-tracing，請手動移除</span>')
+                .addDetail('8.支持http request請求，content type為application/xml類型');
+                
+            versionInfo.createReleaseNote('調整熔斷器日志訊息，避免誤會為錯誤', '1');
+            versionInfo.createReleaseNote('增加本地配置檔緩存功能，提升運行效能', '1');
+            versionInfo.createReleaseNote('調整開發工具支持目錄名稱中帶有底線(_)、中劃線(-)，避免產生package name格式不正確', '2');
+            
+			versionInfo.createReleaseNote('EAI', '2')				
+				.addDetail('全異步服務帶入服務上下文', '2');
+			versionInfo.createReleaseNote('數據持久化', '2')				
+				.addDetail('修正DWQueryInfo有指定select fields時，查詢結果的DWDataRow字段順序不一致')				
+				.addDetail('修正DWQueryInfo.addJoinTableSelectField 指定的欄位也需要回傳', '2');
+			
+			versionInfo.createReleaseNote('微服務組件', '2')				
+				.addDetail('調整DWApplicationConfigUtils和DWModuleConfigUtils的取配置順序');
+			versionInfo.createReleaseNote('系統級微服務-修正菜單服務在管理字段功能開啟時功能報錯', '2');
+			versionInfo.createReleaseNote('排程組件', '2')
+				.addDetail('修正重覆設定啟用排程時報錯')
+				.addDetail('修正排程记录表dw_schedule_record记录排程状态不正确');						
+						
+			versionInfo.createReleaseNote('配置中心', '2')
+				.addDetail('修正客製化層級失效問題')
+				.addDetail('開啟配置中心時，忽略本地log4j2初始化錯誤訊息')
+				.addDetail('修正啟動時config center url日志內容避免造成混淆')
+				.addDetail('修正模組配置從配置中心加載時，找不到時會走本地配置，不應該打印error日誌')
+				.addDetail('調整配置中心日志默認層級');
+
+			versionInfo.createReleaseNote('修正禪道需求#1825 不同应用在相同域名下，对于eai的功能支持', '1')
+			    .addParameter('eaiRestfulUrl', '可指定主路由, 默認值為/eai')
+			    .addParameter('eaiRestfulCustomId', '可指定子路由(接在主路由後), 默認值為空');
+			    
+			versionInfo.createReleaseNote('修正禪道Bug#3149 使用DWDataSet 保存单头单身数据，一笔单头三笔单身在批次模式下保存失败', '2');
+
+			versions.push(versionInfo);
+			
+			versionInfo = createVersionNew('2021-05-31', '3.1.2.1000');
+			versionInfo.createReleaseNote('EAI-全異步回應格式調整', '2');
+			versionInfo.createReleaseNote('EAI-支持服務回參可自定義digi-srvcode值', '1');
+			versionInfo.createReleaseNote('微服務開發框架-支持http request請求，content type為application/xml類型', '1');
+			versionInfo.createReleaseNote('開發工具', '1')
+				.addDetail('調整平台sql與開發工具，支持my sql 5.7版本');
+			versionInfo.createReleaseNote('DWRequester', '1')
+				.addDetail('增加Metadata維護工具，請下載最新版本的DWRequester')
+				.addDetail('增加標準式資源和EAI服務信息給測試工具使用<br/><span style=\"color:red\"><b>此版本僅支持測試工具1.6.0以後的版本，使用1.6.0以前的版本將無法取到服務信息。</b></span>');
+			versionInfo.createReleaseNote('微服務組件-平台服務容器優化', '1')
+			    .addDetail('1.DWContainer')
+			    .addDetail('&emsp;1.1.調用服務前切換線程ClassLoader邏輯移至DWModuleServiceInvocationProcessor')
+			    .addDetail('&emsp;1.2.移除isDWMethodAllowAnonymous方法 - 改為使用DWMethod allowAnonymous方法')
+                .addDetail('&emsp;1.3.移除getDWRestfulMethod方法 - 改為使用改為使用DWRestfulHeaderRepository getDWRestfulMethod方法')
+                .addDetail('&emsp;1.4.移除invokeRestful方法 - 改為傳調用getAPI傳入DWRestfulServiceLocationInfo取得DWTargetAPI之後, 再調用invoke方法')
+			    .addDetail('&emsp;1.5.移除getEaiServiceList方法 - 改為使用DWEAIHeaderRepository getEaiServiceIdList方法')
+			    .addDetail('&emsp;1.6.移除getEaiServiceHeader方法 - 改為使用改為使用DWEAIHeaderRepository getEaiServiceHeader方法')
+                .addDetail('&emsp;1.7.移除getEaiServiceMethod方法 - 改為使用改為使用DWEAIHeaderRepository getEaiServiceMethod方法')
+			    .addDetail('&emsp;1.8.移除getEaiCallbackHeader方法 - 改為使用改為使用DWEAIHeaderRepository getEaiCallbackHeader方法')
+                .addDetail('&emsp;1.9.移除getEaiCallbackMethod方法 - 改為使用改為使用DWEAIHeaderRepository getEaiCallbackMethod方法')
+                .addDetail('&emsp;1.10.移除invokeEai方法 - 改為傳調用getAPI傳入DWEAIServiceLocationInfo取得DWTargetAPI之後, 再調用invoke方法')
+			    .addDetail('2.platform\conf\container-context.xml內容增加DWModuleServiceInvocationProcessor設定')
+			    .addDetail('3.platform\conf\platform.properties中的platformSpringConfigFileNames移除加載container-context.xml')
+			    .addDetail('4.增加DWContainerAutoConfiguration自動配置類取代container-context.xml')
+			    .addDetail('5.FilterConfiguration內部配置類改為自動配置類，並且於於DWContainerAutoConfiguration之後加載')
+			    .addDetail('6.微服務拆分出 定義、搜尋、服務容器、服務定位、請求執行邏輯，增加Standard Restful、EAI服務容器')
+			    .addDetail('<span style="color:red">註:當platformSpringConfigFileNames沒有移除container-context.xml時，DWContainerAutoConfiguration自動配置不啟用</span>')
+                .addDetail('7.移除 DWTracing 組件(若 pom.xml 有依賴dwapiplatform-tracing，請手動移除)')
+                .addDetail('&emsp;<span style="color:red">註:若 pom.xml 有依賴dwapiplatform-tracing，請手動移除</span>')
+                ;
+			versionInfo.createReleaseNote('數據持久化', '2')
+				.addDetail('自定義字段: 修正配置表租戶欄位問題', '2')
+				.addDetail('自定義字段: 查詢配置接口防呆', '2')
+				.addDetail('DWQueryInfo有指定select fields時，查詢結果的DWDataRow字段順序不一致錯誤修正', '2');
+			versionInfo.createReleaseNote('微服務組件-修改上下文中的 map 實現. 以忽略key大小寫返回對應值', '2');
+			versionInfo.createReleaseNote('系統級微服務-菜單服務模組中的管理字段的處理', '2');
+			
+			versions.push(versionInfo);
+			
+			versionInfo = createVersionNew('2021-03-31', '3.1.1.1000');
+			versionInfo.createReleaseNote('服務調用組件', '1')
+			    .addDetail('優化DWServiceClient跨模組調用invoker')
+			    .addDetail('業務中台路由變更方案增加支持服務名稱為配置項，配置規則為xxxModule');
+			versionInfo.createReleaseNote('數據持久化', '2')
+				.addDetail('修正DWQueryInfo傳入notIn條件時後端會報錯')
+				.addDetail('刪除檢核機制多租戶Bug修正')
+				.addDetail('連動刪除第三層沒有將option帶入')
+				.addDetail('修正禪道Bug#2497 跨应用调用时，方法返参类型为DWQueryCondition的对象，包含两个子DWQueryCondition，该对象序列化报错, 修正方式:將 DWQueryCondition 的parent屬性設定為 transient')
+				.addDetail('修正DWDao自訂義select sql加上-${mgmtField}錯誤問題')
+				.addDetail('DWQueryInfo兼容傳入不存在的表名時，仍可正常運行');
+			versionInfo.createReleaseNote('系統級微服務-支持自訂義字段功能', '1');
+			versionInfo.createReleaseNote('EAI-整合EAI服務方全異步功能', '1');
+			versionInfo.createReleaseNote('配置中心優化', '1')
+				.addDetail('提升讀取效能')
+				.addDetail('支持同一個配置檔可以分別寫在本地與配置中心')
+				.addDetail('設定配置中心參數由系統變數改為配置檔') 
+				.addDetail('修正客製化層級失效問題') 
+				.addDetail('支持配置變化監聽') 
+				.addDetail('支持應用群組共用配置') 
+				.addDetail('支持模組共用配置') 
+				.addDetail('支持多語系配置檔');
+			versions.push(versionInfo);
+			
+			versionInfo = createVersionNew('2021-01-15', '3.1.0.1000');
+			//跨租戶整體方案
+			//依租戶分庫
+			//智慧化服務路由和管控能力
+			//DAO 組件分頁功能支持包含 join 之複雜 SQL 語句
+			//數據刪除關聯檢核機制
+			versionInfo.createReleaseNote('微服務開發框架', '1')				
+				.addDetail('開發包預設配置log level改為info')
+				.addDetail('開發結構優化，詳情請看升級指南')
+				.addDetail('安全性議題，升級jackson-databind至2.9.9.2版本');
+				
+			versionInfo.createReleaseNote('微服務組件', '1')
+				.addDetail('服務上下文增加UserSid')
+				.addDetail('檔案上傳效能優化');
+			
+			versionInfo.createReleaseNote('微服務開發框架', '2')
+				.addDetail('二開客制服務未生效bug修正');
+				
+			versionInfo.createReleaseNote('數據持久化', '1')
+				.addDetail('重新定義組件拋出的例外')
+				.addDetail('分頁功能支持包含 join 之複雜 SQL 語句')
+				.addDetail('數據刪除關聯檢核機制')
+				.addDetail('支持依租戶分庫功能')
+				.addDetail('數據庫連線池增加maxIdle設定')
+				.addAlter('dw_rdbms_tables', '新增2個fields:delete_constraint以及hint_field')
+				.addParameter('dbConnectionMaxIdle' ,'預設值為dbConnectionMaxTotal');
+				
+			versionInfo.createReleaseNote('數據持久化', '2')
+				.addDetail('[z_1765]应用开发使用DWDao的select方法编译错误，為了維持舊代碼使用 select 方法的兼容性, 將 z_1765 增加的指定型別相關參數移到 String statement 之前,<span style="color:red">原先使用 z_1322 提供的方法, 在升級到此版本之後, 需要調整參數傳入的順序!</span>')
+				.addDetail('[z_2009]修正DWDataSet.containsTable(String)的方法返回结果')
+				.addDetail('[z_2108]使用DWDao執行SELECT語句時，無需顯示指定關閉查詢管理字段')
+				.addDetail('[z_2214]修正在匿名服務中使用Dao執行自訂義SQL加上停用租戶標籤，會拋 tenantId 遺失的異常');
+			
+			versionInfo.createReleaseNote('服務調用組件', '1')
+				.addDetail('重新定義組件拋出的例外')
+				.addDetail('支持跨租戶服務調用')
+				.addDetail('支持智慧化服務路由和管控能力，ServiceClient invokeSaasService 方法調用雲端 API 時，Header會帶上 routerKey，routerKey 的值為當前用戶的 tenantId');
+			
+			versionInfo.createReleaseNote('服務調用組件', '2')
+				.addDetail('[z_2008]本站点跨模组调用，当被调用的模组出现异常时，未正确回滚事务ServiceClient invokeThisDapService 不適用於目標方法有標記事務的調用場景中,請改為使用 ServiceClient invoke(DWInvTarget target, DWInvMessage message, Class<R> entityTypeOfR),此方法在調用目標發生異常時,會拋出 DWInvocationException 異常, 適用於目標方法有標記事務的調用場景.');
+			versionInfo.createReleaseNote('系統級微服務', '1')
+				.addDetail('增加個性化企業主題維護服務')
+				.addDetail('增加個性化欄位服務');
+			
+			versionInfo.createReleaseNote('系統級微服務', '2')
+				.addDetail('修正功能權限的服務接口，有傳入code時，回傳的page, action只剩一筆');
+			
+			versionInfo.createReleaseNote('IoT', '2')
+				.addDetail('[z_1425][r_9964]支持MQTT动态设定Qos与Retained')
+				.addDetail('[z_2241][r_10260]修正:空值造成連線異常');
+			
+			versionInfo.createReleaseNote('排程', '1')
+				.addDetail(' 支持智慧化服務路由和管控能力,特定租户符合金丝雀部署的规则，在特定容器中使用排程。<br />1.排程組件執行任務時，當參數 scheduleRemoteInvocation 設置為 true 時，會使用 HttpClient 調用此任務，且 Header會帶上 routerKey。<br />備註: routerKey 的值為當前用戶的 tenantId，排程執行任務時，使用的是新增排程時的用戶。')
+				.addParameter('scheduleRemoteInvocation' ,'預設 false')
+			    .addParameter('thisDapUrl' ,'當scheduleRemoteInvocation=true時，此參數設置為應用的基礎http(s)調用地址。' +
+			     '<br/><span style="color:green"><b>範例:</b></span> http(s)://[application domain]');
+				
+			versionInfo.createReleaseNote('排程', '2')
+				.addDetail('修正禪道Bug#2106 排程没有在规定的时间触发')
+				.addDetail('修正禪道Bug#1954 is_allow_concurrent 無效的問題,<span style="color:red">在升級到此版本之後, 有舊的排程允許重複執行時, 需要調用 DWSys 更新此排程的 is_allow_concurrent 為 Y</span>,所謂的允許重複執行是指在某一個時間點執行的服務,到了下一個時間點還沒有結束時, 在 is_allow_concurrent=Y 時, 組件會允許下一個時間執行此相同的服務;在 is_allow_concurrent=N 時. 組件不允許此次的執行, 在 dw_schedule_record 表中, 可以看見此時間點的記錄其 execute_status 標記為 skipped(跳過).')
+				.addDetail('排程功能當設定schedule_type為1, assign_time=yyyyMMdd HH:mm:ss， is_retry為Y時，排程工作沒有預期被執行的bug修正');
+				
+			versionInfo.createReleaseNote('日志', '1')
+				.addDetail('禪道任務#7104 docker 启动多个replicas，再写同一个日志文件时，会有发生其中日志丢失的状况 增加功能,Log4j2.xml 配置中的 RollingFile 修改 fileName 和 filePattern 屬性值關聯 logFileIdentifier')
+				.addParameter('logFileIdentifier', '日誌文件名稱識別編號');
+			
+			versions.push(versionInfo);
+                        
+			versionInfo = createVersionNew('2020-09-30', '3.0.1.1000');
+			versionInfo.createReleaseNote('完成平台組件解耦第一階段', '1')
+                .addDetail('支持平台組件應用在非微服務平台的Java架構上');
+            versionInfo.createReleaseNote('日誌中心支持記錄代碼Exception訊息', '1');			
+			versionInfo.createReleaseNote('排程功能調整', '1')
+		    	.addDetail('排程啟動停用訊息優化')
+				.addDetail('租戶租約到期時，將租戶相關排程工作狀態設定為失效')
+				.addDetail('排程自動取secret key功能改由調用方params參數自行處理，不默認寫入')
+				.addAlter('dw_schedule', '刪除secretKey字段');							
+			versionInfo.createReleaseNote('排程功能調整', '2')
+		    	.addDetail('修正無法連續立即執行排程問題')
+				.addDetail('使用頻次4時，排程關閉後再啟用的操作會出現repeat_count轉型錯誤')
+				.addDetail('修正排程工作被中斷時，排程執行記錄寫入數據庫時拋錯問題')
+				.addDetail('排程執行時服務上下文租戶數據未清空，執行時租戶數據錯誤修正');
+			versionInfo.createReleaseNote('支持互聯中台全異步調用', '1');			
+			versionInfo.createReleaseNote('MQTT組件修正發送成功，但返回false訊息', '2')
+				.addParameter('mqttWaitForCompletion' ,'預設10000(ms)');			
+			versionInfo.createReleaseNote('支持 Http 請求 Header 中設定 Accept-Language 指定語言別', '1');
+			versionInfo.createReleaseNote('新增單號生成組件', '1')
+				.addDetail('新增DocumentIdGenerator-取號組件')
+				.addDetail('DWSys新增IDocumentIdService-調用取號組件Api');
+			versionInfo.createReleaseNote('平台取消緩存token功能，IAM已支持token緩存', '2');
+			versionInfo.createReleaseNote('Dao組件功能修正', '2')
+				.addDetail('修正 DWRdbMetadataLoader 重複查詢的問題')
+				.addDetail('修正非多租戶模式下,沒有配置多租戶數據隔離過濾器的問題');
+			versionInfo.createReleaseNote('Dao組件增加DataSet的批次處理功能', '1')
+			    .addDetail('DWDataSetOperationOption 增加 getTableStatementOption().enableBatchMode() 方法啟用批次模式')
+			    .addDetail('DWDataTableStatementOption 可以設定全部表或是指定表 是否啟用批次模式 以及 是否返回自動生成的鍵值');
+			versionInfo.createReleaseNote('Dao組件功能優化', '1')
+				.addDetail('DWDataSet批次insert功能')
+				.addDetail('DWDataSet提交多筆數據，拋出錯誤，提示哪個Table的哪筆row異常')
+				.addDetail('自定義sql查詢方法，新增自定義回傳的數據類型')
+				.addDetail('樂觀鎖錯誤新增定位信息')
+				.addDetail('管理字段增加抓取系統當前時間功能');			
+            versionInfo.createReleaseNote('支持租戶租約到期，接收由CAC發出租戶租約到期的事件', '1');            
+			versionInfo.createReleaseNote('調用 IAM API 時，Header 加上 Accept-Language 指定語言別', '1');
+			versionInfo.createReleaseNote('調整平台log依賴', '1');
+			versionInfo.createReleaseNote('平台引用日志打印問题修正', '2')
+			    .addDetail('打印日誌請使用 jcl 或 slf4j API')
+			    .addDetail('移除 slf4j-simple 、 log4j-slf4j-impl 和 log4j-jcl 橋接器')
+			    .addDetail('引入 slfj-jcl 橋接器');
+			versionInfo.createReleaseNote('SQL語句bug修正', '2')
+				.addDetail('2.1.4.1000的upgrade.sql格式多1個空格')
+                .addDetail('3.0.0.1000的upgrade.sq新增SET foreign_key_checks')
+                .addDetail('3.0.1.1000的upgrade.sql dw_schedule_record的schedule_param型態為TEXT不可給定預設值');
+            versionInfo.createReleaseNote('修正排程記錄狀態異常問題', '2');
+            versionInfo.createReleaseNote('修正排程記錄start time異常問題', '2');
+			versions.push(versionInfo);
+			
+
+			<!--3.0.0.1000 release notes-->
+			versionInfo = createVersionNew('2020-07-31', '3.0.0.1000');
+
+			versionInfo.createReleaseNote('支持大屏功能', '1')
+			    .addDetail('支持大屏功能')
+			    .addDetail('支持大屏輕量化<font color="#FF0000">*此版本包含刪除大屏相關表(dw_screen*),改由施作大屏功能時處理, 若有使用dw_screen*表與數據,請先備份</font>');
+			
+			versionInfo.createReleaseNote('數據持久層功能調整', '1')
+			    .addDetail('[z_1097]單身序號需求-DWDataRow 可以設定 $info 信息')
+			    .addDetail('[z_1097]單身序號需求-連動查詢可以設定分頁查詢')
+			    .addDetail('[z_1078]管理字段需求')
+			    .addParameter('dwdaoelectVersionFieldEnabled', '是否啟用自動加入選取版本字段')
+			    .addParameter('dwdaoCalculateMaxSeqEnabled', '是否啟用自動計算最大序號值')
+			    .addParameter('dwdaoCalculateMaxSeqFieldName', '設定計算最大序號的字段名稱')
+			    .addParameter('mgmtFieldEnabled', '是否啟用管理字段')
+			    .addParameter('mgmtFieldResolver', '管理字段啟用時, 所使用的管理字段解析器其完整類名')
+			    .addParameter('mgmtFieldInsertMappings', '新增 SQL 中使用的管理字段對應信息')
+			    .addParameter('mgmtFieldUpdateMappings', '更新 SQL 中使用的管理字段對應信息')
+			    .addParameter('dwsqlFilterChianCustom', '設定自定義的 SQL 過濾鍊路');
+
+			versionInfo.createReleaseNote('數據持久層Bug修正', '2')
+			    .addDetail('Dao 問題- DWDataRowState.CREATE_OPERATION  修改為正確的名稱')
+			    .addDetail('Dao 問題- DWQueryInfoValidator 增加 maxPageSize')
+			    .addDetail('Dao 校驗問題- DWQueryInfoValidator 增加集合式校驗')
+			    .addDetail('[z_1300]dwDAO selectone执行报错')
+			    .addDetail('DWQueryInfoBuilder 可以傳入指定的 DWQueryInfo 建置其固定條件')
+			    .addDetail('[z_1264]一对一的主从表进行保存时，因为不能调整执行顺序，先保存了子表，主表未保存，子表获取不到主表的主键，从而报错')
+			    .addDetail('[1458]单身删除记录后录入相同业务关键字的记录保存会报错')
+			    .addAlter('dw_rdbms_relations', '增加一個 enum 型態的字段 Type, 用來設定表和表的關係為 OneToOne(一對一) 或 OneToMany(一對多) 或 OneToMany(多對多)');
+								
+			versionInfo.createReleaseNote('開發工具Bug修正', '2')
+			    .addDetail('本地開發環境mqtt參數值未取代問題')
+			    .addDetail('本地開發環境httpRequestFilters參數值去除cac')
+			    .addDetail('小版升級功能本地運行包參數丟失問題');
+			
+			versionInfo.createReleaseNote('開發工具優化', '1')
+			    .addDetail('優化報錯時例外訊息包裝');
+
+			versionInfo.createReleaseNote('長連結優化', '1')
+			    .addDetail('升級至中台SDK1.11長連結功能(此前的版本azure正式區不能使用)');
+						
+			versionInfo.createReleaseNote('集成中間件功能調整', '1')
+			    .addDetail('IAM 驗證金鑰回應為 502 時, 進行重試功能');
+			
+			versionInfo.createReleaseNote('排程功能調整', '1')
+			    .addDetail('調整排程欄位長度')
+			    .addAlter('dw_schedule', '字段 schedule_param 資料型態改為TEXT')
+			    .addAlter('dw_schedule_record', '字段 execute_id 欄位長度改為varchar(128), 字段 message資料型態改為TEXT');
+			
+			versionInfo.createReleaseNote('服務調用功能Bug修正', '2')
+			    .addDetail('修正調用動作 DWInvocationAction 常數值不正確的問題')
+			    .addDetail('修正日誌未正常輸出問題');
+
+			versionInfo.createReleaseNote('服務調用功能調整', '1')
+			    .addDetail('增加DWRedis API, 並支援Pipeline功能')
+			    .addDetail('調用外部 API 回應非 200 時, 可使用 DWExternalAPIHttpFailedException 包覆原始請求和回應, 以自動產生外部 API 標準失敗信息')
+			    .addDetail('使用 IAMHttpRequester.submit 提交請求後, 如果回應非 200, 會自動包覆 DWExternalAPIHttpFailedException 異常再往外拋出')
+			    .addDetail('platform.properties 中的 httpRequestFilters 有設定 CAC 時, 服務器啟動時會自動把 CAC 移除掉');
+
+			versionInfo.createReleaseNote('運行平台功能調整', '1')
+			    .addDetail('支持服務運行熔斷功能')
+			    .addDetail('支持動態更新熔斷器設定功能')
+			    .addDetail('包裝熔斷、流控、身分驗證運行組件(DWSidecar)，支持非DAP開發後端服務器使用')
+			    .addDetail('支持 Http 請求 Header 中設定 Accept-Language 指定語言別', '1');
+
+			versionInfo.createReleaseNote('系統級服務功能調整', '1')
+			    .addDetail('新增地端管理功能')
+			    .addDetail('日誌中心for Athena');
+			    
+			versionInfo.createReleaseNote('排程功能修正', '2')
+			    .addDetail('修正新建排程時取IAM密鑰時出現錯誤');
+												
+			versions.push(versionInfo);
+
+			versionInfo = createVersionNew('2020-05-31', '2.1.4.1000');
+			versionInfo.createReleaseNote('集成pinpoint探針功能', '1');
+			versionInfo.createReleaseNote('修正當前線程取得模組名稱錯誤', '2');
+			versionInfo.createReleaseNote('[z_1021] 修正排程從無效狀態設定為有效時，Job執行拋出異常問題', '2');
+			versionInfo.createReleaseNote('提供DAP Http client組件，支持重試機制', '1');						
+			versionInfo.createReleaseNote('修正配置中心application.properties合併規則', '2');
+			versionInfo.createReleaseNote('修正訊息多語Util API多傳了一個null值', '2');
+			versionInfo.createReleaseNote('修正本地開發filter多了一個CAC驗證', '2');
+			versionInfo.createReleaseNote('持久層DWDao優化，增加數據操作API', '1');
+			versionInfo.createReleaseNote('Dao 問題- 修正 DWDataTableBuilder 指定非刪除狀態時，刪除的Row在更改狀態後，仍然在移除清單中', '2');
+			versionInfo.createReleaseNote('Dao 問題- 增加 selectOne(DWQueryInfo queryInfo, DWDataSetOperationOption option) 方法，可以傳入 option', '2');
+			versionInfo.createReleaseNote('Dao 問題- DWQueryInfo 設定 fixedCondition 無效', '2');
+			versionInfo.createReleaseNote('[z_1021] 修正排程從無效狀態設定為有效時，Job執行拋出異常問題', '2');
+			versionInfo.createReleaseNote('[z_1012] 修正排程從無效狀態設定為有效時拋出異常問題', '2');
+			versionInfo.createReleaseNote('[z_1003] 修正排程設置沒有在指定時間執行任務的問題', '2');
+			versionInfo.createReleaseNote('[z_1007] 修正排程設置時拋出異常問題', '2');
+			versionInfo.createReleaseNote('[z_1030] 修正新增菜單自動寫入報表預設參數', '2');
+			versionInfo.createReleaseNote('排程功能優化，新增頻次可設定例外時間與工作重試機制', '1');
+			versionInfo.createReleaseNote('移除功能權限緩存功能，IAM自身已經有緩存機制', '1');
+			versionInfo.createReleaseNote('[z_1124] 解決Gson默認把特殊字元轉unicode', '2');
+			versionInfo.createReleaseNote('[r_9209] 既有服務監控啟用時, httpclient攔截器元件轉型報錯', '2');
+			versionInfo.createReleaseNote('[r_9204] mqtt server 斷線重啟後,能夠重新訂閱topic', '2');
+			versionInfo.createReleaseNote('中台長連接SDK至1.08', '1');
+			versionInfo.createReleaseNote('服務模組支持校驗功能','1');
+			versionInfo.createReleaseNote('支持數據集校驗表名和操作約束','1');
+			versions.push(versionInfo);
+
+			versionInfo = createVersionNew('2020-03-31', '2.1.3.1000');
+			versionInfo.createReleaseNote('增加租戶訂閱過期排程停用功能', '1');
+			versionInfo.createReleaseNote('MQTT callback支持獲取topic資訊', '1');
+			versionInfo.createReleaseNote('MQTT功能啟用判斷調整', '2');
+			versionInfo.createReleaseNote('增加看板初始化事件', '1');
+			versionInfo.createReleaseNote('增加運行時Jar檔加密功能', '1');
+			versionInfo.createReleaseNote('增加大屏系統級後端服務', '1'); 
+			versionInfo.createReleaseNote('增加數據權限組件', '1'); 
+			versionInfo.createReleaseNote('增加服務運行熔斷功能', '1'); 
+			versions.push(versionInfo);
+					
+			versionInfo = createVersionNew('2019-11-30', '2.1.2.1000');
+			versionInfo.createReleaseNote('[r_7840] 新增IoT(Mqtt) 功能', '1');
+			versionInfo.createReleaseNote('DWResourceBundle相關類別增加和棄用方法', '1');
+			versionInfo.createReleaseNote('[z_707]可指定語言別(locale)調用服務,修正DWResourceBundle取當前語言別的邏輯', '1');
+			versionInfo.createReleaseNote('升級DWQueue version', '1');
+			versionInfo.createReleaseNote('修正中台多語系參數問題', '2');
+			versionInfo.createReleaseNote('[z_370]自定義Restful服務支持DWFile參數', '2');
+			versionInfo.createReleaseNote('[z_370]修正restful傳body參數為空', '2');
+			versionInfo.createReleaseNote('修正 DWDefaultParameters 對String參數和泛型化參數轉型的問題', '2');
+			versionInfo.createReleaseNote('增加eaiHostId, eaiHostUid, eaiHostProd設定', '1');
+			versionInfo.createReleaseNote('支持排程服務調用其他DAP服務前，透過IAM密鑰取得token', '1');
+			versionInfo.createReleaseNote('[z_722]，使用spring mongotemplate,runtime會有找不到方法的問題', '2');
+			versionInfo.createReleaseNote('[z_472] 修正自定義URL解析規則', '2');
+			versionInfo.createReleaseNote('開發工具優化', '1');
+			versionInfo.createReleaseNote('開發工具服務升級、資料庫版更bug修正', '2');
+			versionInfo.createReleaseNote('[1568]排程問題', '2');
+			versionInfo.createReleaseNote('長連接新增TLS', '1');
+			versionInfo.createReleaseNote('[z_753]IAM 錯誤為 401/406 時, 設定為 error code 10904', '1');
+			versions.push(versionInfo);  			
+  			
+  			versionInfo = createVersionNew('2019-09-30', '2.1.1.1000');
+			versionInfo.createReleaseNote('長連接版本升級至1.0(整合EAI)', '1');
+			versionInfo.createReleaseNote('新增和EAI的同步資訊協定', '1');
+			versionInfo.createReleaseNote('[z_355]DAO 排序 SQL 的執行順序有錯誤', '2');
+            versionInfo.createReleaseNote('[z_1326]接口參數型別為String時,反序列化會發生異常', '2');
+			versionInfo.createReleaseNote('開發包工具優化-增加小版升級功能', '1');
+			versionInfo.createReleaseNote('[r_7577]支持調用方傳入的 app token', '1');
+			versionInfo.createReleaseNote('[r_7578]當服務器沒有配置 appId 時，使用傳入的 app token 裡的 app id 獲取該用戶的權限', '1');
+			versionInfo.createReleaseNote('[z_7578]DAP框架对于图片类型也可以返回二进制类型', '1');
+			versionInfo.createReleaseNote('模組產生工具的aop設定中，忘記加上proxy-target-class="true"，導致服務間spring的autowired會找不到代理', '2');
+			versionInfo.createReleaseNote('增加雲調雲或地調地功能', '1');
+			versionInfo.createReleaseNote('在開發多租戶的情境下，自定義insert sql的${tenantName} tag無法正確被取代成tenantSid', '2');
+			versionInfo.createReleaseNote('[z_272]list对象集合参数，后端api接口方法接收到后无法对list进行遍历取出list集合单个对象', '2')
+			versions.push(versionInfo);
+			
+  			versionInfo = createVersionNew('2019-07-31', '2.1.0.1000');
+			versionInfo.createReleaseNote('服務調用鏈優化-增加 httpclient 調用的關注(IAM)', '1');
+			versionInfo.createReleaseNote('增加自定義首頁後端服務', '1');
+			versionInfo.createReleaseNote('基礎目錄結構優化，詳細調整內容請參考平台升級指南文件', '1')
+			versionInfo.createReleaseNote('修正report url設定為空時，「上傳互聯應用」功能報錯bug','2');
+			versionInfo.createReleaseNote('Redis接口優化<br />(1)優化keys api底層效能<br />(2)新增scan、incrBy方法','1');
+			versionInfo.createReleaseNote('DWApiGateway產生的token增加token過期設定項目','1');
+			versionInfo.createReleaseNote('修正「熱更新reload後缺少重複執行標記DWOnLoad服務」','2');
+			versionInfo.createReleaseNote('導入配置中心','1');
+  			versionInfo.createReleaseNote('[z_728] 增加初始化API和移動初始化事件', '1');
+  			versionInfo.createReleaseNote('[z_894] 服务接口需要返回自訂義 byte array 型態', '1');
+  			versionInfo.createReleaseNote('[z_217] CAC 驗證失敗後, 微服務返回的錯誤編碼不正確', '2');
+			versionInfo.createReleaseNote('安全性議題升級平台參考jackson-databind至2.9.9.1', '1');
+			versionInfo.createReleaseNote('修改EAI註冊時取得IP流程', '1');
+			versionInfo.createReleaseNote('[z_257]兩個模組使用同自訂路由會有一個模組調用不到', '1');
+			
+			versions.push(versionInfo);
+			
+			versionInfo = createVersionNew('2019-05-31', '2.0.2.1000');
+			versionInfo.createReleaseNote('基礎目錄結構優化，詳細調整內容請參考平台升級指南文件', '1')
+            versionInfo.createReleaseNote('1.修正.K8s環境下,ipaddress 為空的問題<br /> 2.鏈路若為資料庫查詢,增加查詢量的tag','2');  			  		
+            versionInfo.createReleaseNote('升級DMC至1.2.0.1','1');
+            versionInfo.createReleaseNote('長連接0.1重新註冊增加重試流程','1');
+			versionInfo.createReleaseNote('DWApiGateay增加cahce功能。token驗證、作業權限調整加入cache功能','1');
+			versionInfo.createReleaseNote('docker佈署時有用到spring boot參數導致錯誤','2');
+			versionInfo.createReleaseNote('排程啟動Job時，原本的TenantId改為TenantSid，造成在調用地端時缺少TenantSid而找不到地端DWApiGateway問題修正','2');  			
+            versionInfo.createReleaseNote('新增前端組織人員開窗所需的相關API', '1');
+  			versions.push(versionInfo);
+			  				
+			return versions;
+		}
+
+		// 2020-7-21 falcon 建立 ReleaseNote 對象
+	    // description 描述
+	    // releaseType 類型
+		function createReleaseNoteGlobal(description, releaseType) {
+
+            var releaseNote = {};
+            releaseNote.description = description;
+            releaseNote.releaseType = releaseType;
+            releaseNote.details = [];
+            releaseNote.parameters = [];
+            releaseNote.alters = [];
+
+            // 增加明細說明
+            releaseNote.addDetail = function addDetail(detailDescription) {
+
+                this.details.push(detailDescription);
+                return this;
+            }
+            releaseNote.addParameter = function addParameter(name, description) {
+
+              	var parameter = {};
+  				parameter.name = name;
+  				parameter.description = description;
+  				this.parameters.push(parameter);
+                return this;
+            }
+            releaseNote.addAlter = function addAlter(name, description) {
+
+  				var alter = {};
+  				alter.name = name;
+  				alter.description = description;
+  				this.alters.push(alter);
+
+  				return this;
+            }
+
+            return releaseNote;
+		}
+		
+		function createVersionNew(releaseDate, version, deprecated) {
+  			
+  			var versionInfo = {};
+
+  			versionInfo.releaseDate = releaseDate;
+  			versionInfo.version = version;
+  			versionInfo.deprecated = deprecated ? true : false;
+  			versionInfo.releaseNotes = [];
+			versionInfo.parameters = [];
+  			versionInfo.alters = [];
+  			
+  			versionInfo.createReleaseNote = function createReleaseNote(description, releaseType) {
+  			
+	  			var releaseNote = createReleaseNoteGlobal(description, releaseType);
+  				this.releaseNotes.push(releaseNote);
+
+  				return releaseNote;
+  			}
+			
+			// 2020-7-6 falcon 建立此版本新增加的參數
+  			versionInfo.createParameter = function createParameter(name, description) {
+
+  				var parameter = {};
+  				parameter.name = name;
+  				parameter.description = description;
+  				this.parameters.push(parameter);
+  			}
+            versionInfo.createAlter = function createAlter(name, description) {
+
+  				var alter = {};
+  				alter.name = name;
+  				alter.description = description;
+  				this.alters.push(alter);
+  			}
+ 
+  			return versionInfo;
+  		}
+  	
+  		function getReleaseNotes() {
+  
+  			var versions = [];
+  			var versionInfo;
+			var releaseNote;
+			
+			versionInfo = createVersion('2019-03-29', '2.0.1.1000');
+  			versionInfo.createReleaseNote('修正金鑰驗證相關錯誤碼','DWTokenService.jar');
+  			versionInfo.createReleaseNote('加入外層異常攔截後日誌異常堆棧信息','DWFilter.jar');
+  			versionInfo.createReleaseNote('支持模組使用 Spring Boot 配置，使用 SpringApplication 啟動','DWModule.jar');
+  			versionInfo.createReleaseNote('Log功能增加只保留7天的log檔案','','','log4j2.xml');
+			versionInfo.createReleaseNote('調整伺服器配置方式','DWQueue.jar');
+			versionInfo.createReleaseNote('雲/地端傳輸訊息增加UTF-8編碼','DWQueue.jar');
+			versionInfo.createReleaseNote('依據新版CAC重新調整CAC filter','DWFilter.jar');
+  			versionInfo.createReleaseNote('多租戶-db欄位異動datatype與欄位名稱','DWApiGatewaySpringBoot.jar<br/>DWDAO.jar<br/>DWSchedule.jar</br>DWTokenService.jar','','replace.properties','upgrade-tenant.sql','','新增 DEV-SDV-513 多租戶資料型態異動說明.dps');			
+			versionInfo.createReleaseNote('增加transaction-manager-chain jar，使用情境為服務同一方法中開啟多個數據庫來源時，要控制交易一致性時使用。','DWQueue.jar');
+		    versionInfo.createReleaseNote('MenuService 多租戶 tag,調整為tenantsid','DWSys.jar');
+			versionInfo.createReleaseNote('Token service在非多租戶的環境報錯','DWTokenService.jar');
+			versionInfo.createReleaseNote('修正禪道 273 單號','DWContainer.jar');
+			versionInfo.createReleaseNote('調整取租戶配置與tag的方式','DWUtility.jar<br/>DWSchedule.jar');
+			versionInfo.createReleaseNote('在非多租戶環境,取tenantsid 報錯(轉型失敗)','DWTokenServicejar');
+			versionInfo.createReleaseNote('平台提供的返回值构造器DWServiceResultBuilder.build(success，orgResult)未使用傳參success bug修正','DWDao.jar');
+			versionInfo.createReleaseNote('抓取IAM權限時忽略大小寫比對','DWSys.jar');
+			versionInfo.createReleaseNote('修正禪道 57 單號','DWIAM.jar','','dw-iam.properties<br>增加 iamKeepAliveTimeout');
+			versionInfo.createReleaseNote('增加RabbitMQ的Heartbeat、TcpConnectionTimeout和HandshakeTimeout設定','DWQueue.jar');
+			versionInfo.createReleaseNote('DWSys模組增加檢查後端服務是否正常運作服務','DWSys.jar');
+			versionInfo.createReleaseNote('排程任務紀錄UI調整增加排程排程名稱,執行者字段','DWSchedule.jar');
+			versionInfo.createReleaseNote('調整菜單授權驗證判斷CAC URL是否為空','DWSys.jar');
+			versionInfo.createReleaseNote('新增服務調用跟蹤功能','DWTracing.jar','','replace.properties<br/>dw-filter.properties<br/>dw-server.properties<br/>dw-tracing.properties<br/>spring-dw-tracing.xml');
+			
+  			versions.push(versionInfo);
+
+  			//-----
+  			versionInfo = createVersion('2018-12-26', '2.0.0.0');
+  			versionInfo.createReleaseNote('發佈2.0.0.0');
+  			versions.push(versionInfo);
+
+  			return versions;
+  		}
+  		
+  		function createVersion(releaseDate, version, deprecated) {
+  			
+  			var versionInfo = {};
+
+  			versionInfo.releaseDate = releaseDate;
+  			versionInfo.version = version;
+  			versionInfo.deprecated = deprecated ? true : false;
+  			versionInfo.releaseNotes = [];
+  			
+  			versionInfo.createReleaseNote = function createReleaseNote(description, jarList, springConfigList, propertiesList, sqlList, deploymentList, documentList) {
+  			
+	  			var releaseNote = {};
+	  			releaseNote.description = description;
+	  			releaseNote.jarList = !jarList ? "" : jarList;
+	  			releaseNote.springConfigList = !springConfigList ? "" : springConfigList;
+	  			releaseNote.propertiesList = !propertiesList ? "" : propertiesList;
+	  			releaseNote.sqlList = !sqlList ? "" : sqlList;
+	  			releaseNote.deploymentList = !deploymentList ? "" : deploymentList;
+	  			releaseNote.documentList = !documentList ? "" : documentList;
+  			
+  				this.releaseNotes.push(releaseNote);
+  			}
+ 
+  			return versionInfo;
+  		}
+  	
+  		function initialize() {
+  			
+  			var versions = getReleaseNotes();
+  			var versionInfo;
+  			var versionHtml;
+  			var releaseNote;
+  			var seq;
+  			
+  			var lastIndex = versions.length - 1;
+  			for (var i = lastIndex; i >=0; i--) {
+  				  			//debugger;
+  				versionInfo = versions[i];
+  				versionHtml = '<h2><span class="';
+  				extraInfo = '';
+  				
+  				// set class
+  				if (versionInfo.deprecated) {
+  				
+  					versionHtml += 'release-date version-deprecated';
+  					extraInfo = '<span style="color:red">此版本棄用，請勿使用!<span>';
+  				}
+  				else {
+  					
+  					versionHtml += 'release-date';
+  				}
+  				
+  				versionHtml += '">v' + versionInfo.version + '發版功能 [' + versionInfo.releaseDate + ']</span>';
+  				versionHtml += extraInfo + '</h2>';
+ 
+  				versionHtml += '<table class="';
+					// set class
+  				if (versionInfo.deprecated) {
+  				
+  					versionHtml += 'version-deprecated';
+  				}
+  				else {
+  					
+  					versionHtml += '';
+  				}
+
+					versionHtml += '">';
+  				versionHtml += '<tr>';
+  				versionHtml += '	<th>編號</th>';
+  				versionHtml += '	<th>功能調整</th>';
+  				versionHtml += '	<th>平台jar檔異動</th>';
+  				versionHtml += '	<th>spring相關xml異動</th>';
+  				versionHtml += '	<th>參數檔異動</th>';
+  				versionHtml += '	<th>SQL異動</th>';
+  				versionHtml += '	<th>Docker、K8S打包異動</th>';
+  				versionHtml += '	<th>說明文件異動</th>';
+  				versionHtml += '</tr>';
+  				
+  				seq = 1;
+  				for (var ridx in versionInfo.releaseNotes) {
+  					releaseNote = versionInfo.releaseNotes[ridx];
+	   				
+	   				versionHtml += '<tr>';
+	  				versionHtml += '	<td>' + seq++ + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.description + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.jarList + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.springConfigList + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.propertiesList + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.sqlList + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.deploymentList + '</td>';
+	  				versionHtml += '	<td>' + releaseNote.documentList + '</td>';
+	  				versionHtml += '</tr>';
+  				}
+  				
+  				versionHtml += '</table>';
+  				versionH2 = document.createElement('div');
+  				versionH2.innerHTML = versionHtml;
+  				
+  				var h1 = document.getElementById("releaseNoteH1");
+  				
+  				h1.parentElement.insertBefore(versionH2, h1.nextSibling.nextSibling);
+  			}
+  		}
+
+        // release note detail 按鈕按下時, 增加或移除 hideme attribute
+        function releaseNoteDetails_onClick(btnDetails) {
+
+            var hideMeAttributeName = "hideme";
+            var detailsSpan = btnDetails.nextElementSibling;
+            if (detailsSpan.hasAttribute(hideMeAttributeName)) {
+                detailsSpan.removeAttribute(hideMeAttributeName);
+
+                btnDetails.value = btnDetails.value.replace('+', '-');
+            }
+            else {
+                detailsSpan.setAttribute(hideMeAttributeName, true);
+
+                btnDetails.value = btnDetails.value.replace('-', '+');
+            }
+        }
+
+  		// 建立 release note 對象的 html
+  		function createReleaseNoteHtml(releaseNote) {
+
+  		    var htmlString = '<li>';
+  		    htmlString += releaseNote.description;
+
+            var createParameters = releaseNote.parameters.length > 0;
+            var createAlters = releaseNote.alters.length > 0;
+
+  		    // 建立明細
+  		    var createDetails = releaseNote.details.length > 0 || createParameters || createAlters;
+            if (createDetails) {
+                if (createParameters) htmlString += '<label class="releaseNoteParamsHintLabel" title="參數異動">P</label>';
+                if (createAlters) htmlString += '<label class="releaseNoteAltersHintLabel" title="數據庫異動">A</label>';
+
+                htmlString += '<input type="button" class="releaseNoteDetail" value="+詳情" onclick="releaseNoteDetails_onClick(this)"></input>';
+                htmlString += '<span hideme="true">';
+            }
+
+            for (var detailIdx in releaseNote.details) {
+
+                htmlString += releaseNote.details[detailIdx] + "</br>";
+            }
+
+            if (createDetails) htmlString += '<span/>';
+
+            var currentItem;
+            var paramsHtml = '';
+            for (var paramIdx in releaseNote.parameters) {
+
+                currentItem = releaseNote.parameters[paramIdx];
+                paramsHtml += '<tr>';
+                paramsHtml += '	<td style="text-align:center">' + (parseInt(paramIdx) + 1) + '</td>';
+                paramsHtml += '	<td>' + currentItem.name + '</td>';
+                paramsHtml += '	<td>' + currentItem.description + '</td>';
+
+                paramsHtml += '</tr>';
+            }
+            if (createParameters) {
+
+                htmlString += "<ul><li>參數異動</li></ul>";
+                htmlString += '<table class="releaseNoteParametersTable">';
+				htmlString += '	<tr>';
+				htmlString += '		<th>序號</th>';
+				htmlString += '		<th style="width:30%">名稱</th>';
+				htmlString += '		<th style="width:60%">說明</th>';
+				htmlString += '	</tr>';
+                htmlString += paramsHtml + "</table>";
+            }
+            var alterHtml = '';
+            for (var alterIdx in releaseNote.alters) {
+
+                currentItem = releaseNote.alters[alterIdx];
+                alterHtml += '<tr>';
+                alterHtml += '	<td style="text-align:center">' + (parseInt(alterIdx) + 1) + '</td>';
+                alterHtml += '	<td>' + currentItem.name + '</td>';
+                alterHtml += '	<td>' + currentItem.description + '</td>';
+
+                alterHtml += '</tr>';
+            }
+            if (createAlters) {
+
+                htmlString += "<ul><li>數據庫異動</li></ul>";
+                htmlString += '<table class="releaseNoteAltersTable">';
+				htmlString += '	<tr>';
+				htmlString += '		<th>序號</th>';
+				htmlString += '		<th style="width:30%">表名</th>';
+				htmlString += '		<th style="width:60%">說明</th>';
+				htmlString += '	</tr>';
+                htmlString += alterHtml + "</table>";
+            }
+
+  		    htmlString += '</li>';
+
+            return htmlString;
+  		}
+		
+		function initializeNew() {
+  			
+  			var versions = getReleaseNotesNew();
+  			var versionInfo;
+  			var versionHtml;
+  			var releaseNote;
+  			var seq;
+  			
+  			var lastIndex = versions.length - 1;
+  			for (var i = lastIndex; i >=0; i--) {
+  				  			//debugger;
+  				versionInfo = versions[i];
+  				versionHtml = '<h2><span class="';
+  				extraInfo = '';
+  				
+  				// set class
+  				if (versionInfo.deprecated) {
+  				
+  					versionHtml += 'release-date version-deprecated';
+  					extraInfo = '<span style="color:red">此版本棄用，請勿使用!<span>';
+  				}
+  				else {
+  					
+  					versionHtml += 'release-date';
+  				}
+  				
+  				versionHtml += '">v' + versionInfo.version + '發版功能 [' + versionInfo.releaseDate + ']</span>';
+  				versionHtml += extraInfo + '</h2>';
+  				
+  				seq = 1;
+				var featuresHtml = "";
+				var bugsHtml = "";
+				
+  				for (var ridx in versionInfo.releaseNotes) {
+  					releaseNote = versionInfo.releaseNotes[ridx];
+	   				
+					if(releaseNote.releaseType == "1") {
+
+					    // 建立每一條 releaseNote 對象
+						featuresHtml += createReleaseNoteHtml(releaseNote);
+					}
+					
+					if(releaseNote.releaseType == "2"){
+						bugsHtml += createReleaseNoteHtml(releaseNote);
+					}
+  				}
+				
+				var paramsHtml = "";
+				for (var paramIdx in versionInfo.parameters) {
+
+					param = versionInfo.parameters[paramIdx];
+					paramsHtml += '<tr>';
+					paramsHtml += '	<td style="text-align:center">' + (parseInt(paramIdx) + 1) + '</td>';
+					paramsHtml += '	<td>' + param.name + '</td>';
+					paramsHtml += '	<td>' + param.description + '</td>';
+
+					paramsHtml += '</tr>';
+				}
+				var altersHtml = "";
+				for (var alterIdx in versionInfo.alters) {
+
+					alter = versionInfo.alters[alterIdx];
+					altersHtml += '<tr>';
+					altersHtml += '	<td style="text-align:center">' + (parseInt(alterIdx) + 1) + '</td>';
+					altersHtml += '	<td>' + alter.name + '</td>';
+					altersHtml += '	<td>' + alter.description + '</td>';
+
+					altersHtml += '</tr>';
+				}
+				var altersHtml = "";
+				for (var alterIdx in versionInfo.alters) {
+
+					alter = versionInfo.alters[alterIdx];
+					altersHtml += '<tr>';
+					altersHtml += '	<td style="text-align:center">' + (parseInt(alterIdx) + 1) + '</td>';
+					altersHtml += '	<td>' + alter.name + '</td>';
+					altersHtml += '	<td>' + alter.description + '</td>';
+
+					altersHtml += '</tr>';
+				}
+				
+				versionHtml += '<ul>';
+				versionHtml += '<li>功能調整</li><ul>' + featuresHtml + '</ul>';
+				versionHtml += '<li>Bug修正</li><ul>' + bugsHtml + '</ul>';
+				if (paramsHtml) {
+                    var header = '<table>';
+					header += '	<tr>';
+					header += '		<th>序號</th>';
+					header += '		<th style="width:30%">名稱</th>';
+					header += '		<th style="width:60%">說明</th>';
+					header += '	</tr>';
+					paramsHtml = header + paramsHtml + "</table>";
+
+					versionHtml += '<li>參數增加</li><ul>' + paramsHtml + '</ul>';
+				}
+				if (altersHtml) {
+					var header = '<table>';
+					header += '	<tr>';
+					header += '		<th>序號</th>';
+					header += '		<th style="width:30%">表名</th>';
+					header += '		<th style="width:60%">說明</th>';
+					header += '	</tr>';
+					altersHtml = header + altersHtml + "</table>";
+
+					versionHtml += '<li>數據庫異動</li><ul>' + altersHtml + '</ul>';
+				}
+
+				versionHtml += '</ul>';
+				
+  				versionH2 = document.createElement('div');
+  				versionH2.innerHTML = versionHtml;
+
+  				// 將版本對象新增至 "releaseNoteH1" tag 裡
+  				var h1 = document.getElementById("releaseNoteH1");
+  				h1.parentElement.insertBefore(versionH2, h1.nextSibling.nextSibling);
+  			}
+  		}
+
+            function sortCell() {
+                var tbs = document.getElementsByTagName("table");
+				//alert(tbs.length);
+				var tbs_len = tbs.length;
+				for(var i = 0; i < tbs_len; i++){
+					//alert(tbs[i]);
+				    var tb = tbs[i];
+					var len = tb.rows.length;
+					for (var j = 1; j < len; j++) {
+						tb.rows[j].cells[0].innerHTML = j;
+					}
+				}
+                
+            }
+			
+        </script>
+</head>
+<body onload="sortCell();initialize();initializeNew();">
+    <div class="release">
+        <h1 id='releaseNoteH1'>[API平台]Release Note</h1>
+    </div>
+    </body>
+</html>
+4.1.0.1000	2021-12-30
+4.1.0.1001	2022-01-04
+4.1.0.1002	2022-01-06
+4.1.0.1003	2022-01-13
+4.1.0.1004	2022-01-13

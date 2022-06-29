@@ -1,0 +1,7 @@
+INSERT INTO `dw_rdbms_fields` (`TABLE_NAME`, `SEQ`, `FIELD_NAME`, `IS_KEY`, `FIELD_TYPE`, `STATUS_CODE`, `FIELD_DISPLAY_NAME`, `SCALE`, `DEFAULT_VALUE`, `NULLABLE`, `IS_VERSION`, `SIZE`, `IS_AUTO_INCREMENT`) VALUES ('dw_schedule', 15, 'program_code', 'N', 'varchar', 'Y', 'program_code', '0', '', 'Y', 'N', '50', 'N');
+
+INSERT INTO `dw_rdbms_fields` (`TABLE_NAME`, `SEQ`, `FIELD_NAME`, `IS_KEY`, `FIELD_TYPE`, `STATUS_CODE`, `FIELD_DISPLAY_NAME`, `SCALE`, `DEFAULT_VALUE`, `NULLABLE`, `IS_VERSION`, `SIZE`, `IS_AUTO_INCREMENT`) VALUES ('dw_schedule_record', 11, 'program_code', 'N', 'varchar', 'Y', 'program_code', '0', '', 'Y', 'N', '50', 'N');
+
+INSERT INTO `dw_rdbms_fields` ( `TABLE_NAME`, `SEQ`, `FIELD_NAME`, `IS_KEY`, `FIELD_TYPE`, `STATUS_CODE`, `FIELD_DISPLAY_NAME`, `SCALE`, `DEFAULT_VALUE`, `NULLABLE`, `IS_VERSION`, `SIZE`, `IS_AUTO_INCREMENT` ) VALUES ( 'dw_schedule_record', 12, 'schedule_name', 'N', 'varchar', 'Y', 'schedule_name', '0', '', 'Y', 'N', '50', 'N' );
+
+INSERT INTO `dw_rdbms_fields` ( `TABLE_NAME`, `SEQ`, `FIELD_NAME`, `IS_KEY`, `FIELD_TYPE`, `STATUS_CODE`, `FIELD_DISPLAY_NAME`, `SCALE`, `DEFAULT_VALUE`, `NULLABLE`, `IS_VERSION`, `SIZE`, `IS_AUTO_INCREMENT` ) VALUES ( 'dw_schedule_record', 13, 'executor', 'N', 'varchar', 'Y', 'executor', '0', '', 'Y', 'N', '50', 'N' );

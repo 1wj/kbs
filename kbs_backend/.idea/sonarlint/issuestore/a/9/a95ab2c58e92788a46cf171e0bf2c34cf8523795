@@ -1,0 +1,18 @@
+
+w
+java:S1488="\Immediately return this expression instead of assigning it to the temporary variable "data".(ÿàöÃüÿÿÿÿ
+W
+java:S1128"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ
+O
+java:S1128":Remove this unused import 'java.io.ByteArrayOutputStream'.(Î‡È
+U
+java:S1118":Add a private constructor to hide the implicit public one.(í“‘©ıÿÿÿÿ
+]
+java:S22598"BA "NullPointerException" could be thrown; "body" is nullable here.(É½Œüÿÿÿÿ
+[	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(ó±Ü×
+E
+java:S37400"/Provide the parametrized type for this generic.(Œ­ƒ
+K
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º

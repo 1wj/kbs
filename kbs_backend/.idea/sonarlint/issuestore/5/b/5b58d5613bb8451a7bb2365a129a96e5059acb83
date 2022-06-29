@@ -1,0 +1,16 @@
+
+`
+java:S11923"JDefine a constant instead of duplicating this literal "success!" 13 times.(Î¤Û
+`
+java:S3252+"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(ª£Í÷şÿÿÿÿ
+e
+java:S1192º"IDefine a constant instead of duplicating this literal "tag_info" 6 times.(ûÍÏşÿÿÿÿ
+`
+java:S3252B"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(ª£Í÷şÿÿÿÿ
+a
+java:S3252¹"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(ª£Í÷şÿÿÿÿ
+`
+java:S3252W"EUse static access with "com.alibaba.fastjson.JSON" for "parseObject".(ª£Í÷şÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(ÆÍ
+t
+java:S1192,"YDefine a constant instead of duplicating this literal "tag_classification_info" 11 times.(ªì€´ûÿÿÿÿ

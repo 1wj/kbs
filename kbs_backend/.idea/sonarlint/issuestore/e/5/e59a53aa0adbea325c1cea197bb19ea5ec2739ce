@@ -1,0 +1,11 @@
+
+f	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï‡ïŠ
+e	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õî|
+r
+java:S3008"WRename this field "FilePathHome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÕôÂûÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Øø»íşÿÿÿÿ
+\
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(´ÕôÂûÿÿÿÿ
+B
+java:S1612F",Replace this lambda with a method reference.(ı¹¹İ

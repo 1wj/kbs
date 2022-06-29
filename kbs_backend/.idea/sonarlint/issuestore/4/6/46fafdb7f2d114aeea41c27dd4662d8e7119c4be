@@ -1,0 +1,29 @@
+
+E
+java:S1066A"/Merge this if statement with the enclosing one.(Œê—´
+n	java:S135+"YReduce the total number of break and continue statements in this loop to use at most one.(¼ßð¥
+p
+java:S1128"ZRemove this unused import 'com.digiwin.app.kbs.service.mws.domain.model.toKmo.Pagination'.(Æ¡×Ñ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(äØìÈøÿÿÿÿ
+Z
+java:S18544"?Remove this useless assignment to local variable "annotations".(ß­Ýïûÿÿÿÿ
+h
+java:S3776("RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(íÌ÷¯
+B
+java:S3011,",This accessibility update should be removed.(˜ÂÓ˜
+_
+java:S2147U"DCombine this catch with the one at line 81, which has the same body.(µØ¯®øÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(¯•åƒþÿÿÿÿ
+V	java:S125;"<This block of commented-out lines of code should be removed.(šÂ¿òýÿÿÿÿ
+B
+java:S3011C",This accessibility update should be removed.(ØÃÃ«
+Q	java:S125L"<This block of commented-out lines of code should be removed.(ÐƒüÙ
+Q	java:S125R"<This block of commented-out lines of code should be removed.(†€éˆ
+B
+java:S1172c",Remove this unused method parameter "field".(ßÀŒß
+n	java:S131e"YComplete cases by adding the missing enum constants or add a default case to this switch.(Á«†Ë
+K
+java:S14814"0Remove this unused "annotations" local variable.(ß­Ýïûÿÿÿÿ
+E
+java:S1068"*Remove this unused "logger" private field.(„ÄŠãøÿÿÿÿ

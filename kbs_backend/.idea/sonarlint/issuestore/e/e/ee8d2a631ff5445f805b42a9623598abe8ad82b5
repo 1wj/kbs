@@ -1,0 +1,15 @@
+
+f
+java:S1128"PRemove this unused import 'org.springframework.context.ApplicationContextAware'.(’ïý·
+Y
+java:S1128	"CRemove this unused import 'org.springframework.stereotype.Service'.(¼º¡Ú
+`
+java:S1128"ERemove this unused import 'org.springframework.beans.BeansException'.(Æ¢ùìüÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(ÚÓŠöùÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ƒÆÓ±
+G
+java:S1135"2Complete the task associated to this TODO comment.(£°§\
+U
+java:S1118":Add a private constructor to hide the implicit public one.(‰šö¶úÿÿÿÿ
+`
+java:S1128"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿ

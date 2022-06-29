@@ -1,0 +1,13 @@
+
+l
+java:S1128"VRemove this unused import 'com.digiwin.app.kbs.service.mws.domain.model.KnoBaseModel'.(È·›Ò
+_
+java:S1192-"IDefine a constant instead of duplicating this literal "success!" 9 times.(Î¤Û
+^
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectMapper'.(´‘¨™
+e
+java:S1192'"ODefine a constant instead of duplicating this literal "knowledge_info" 5 times.(¹úŸ½
+s
+java:S1128"XRemove this unused import 'com.digiwin.app.kbs.service.mongo.document.KnowledgeBaseDoc'.(Àˆ™şıÿÿÿÿ
+V
+java:S1128"@Remove this unused import 'org.springframework.beans.BeanUtils'.(ŠğÄÜ

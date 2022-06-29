@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/develop/DWThirdPartyLibrary" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs/app-service-impl-kbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs/app-service-impl-kbs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs/app-service-impl-kbs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs/app-service-interface-kbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs/app-service-interface-kbs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/develop/module/kbs/app-service-interface-kbs/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

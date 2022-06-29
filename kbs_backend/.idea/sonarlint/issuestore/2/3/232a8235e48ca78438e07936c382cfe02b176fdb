@@ -1,0 +1,33 @@
+
+d
+java:S2095>"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(™Ãõ«
+J
+java:S3740L"/Provide the parametrized type for this generic.(Ø¶’îýÿÿÿÿ
+E
+java:S3740s"/Provide the parametrized type for this generic.(©ê¢Í
+E
+java:S3740u"/Provide the parametrized type for this generic.(Ì¼½¿
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(¯’Ý³
+[	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(—íÞì
+`	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(öœ¢¡ùÿÿÿÿ
+_
+java:S2259v"DA "NullPointerException" could be thrown; "result" is nullable here.(ýéÐ ûÿÿÿÿ
+b
+java:S2259Z"GA "NullPointerException" could be thrown; "inChannel" is nullable here.(ãÝ¹ãûÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ºöÿÜ
+Q	java:S125!"<This block of commented-out lines of code should be removed.(¸ãÔÒ
+V	java:S125/"<This block of commented-out lines of code should be removed.(’®ñæþÿÿÿÿ
+V	java:S125<"<This block of commented-out lines of code should be removed.(ŸÆÓôþÿÿÿÿ
+G
+java:S3011T",This accessibility update should be removed.(íË©¶úÿÿÿÿ
+E
+java:S2093="*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+“
+java:S1130b"}Remove the declaration of thrown exception 'java.io.UnsupportedEncodingException', as it cannot be thrown from method's body.(íÅÉ­
+V	java:S125f"<This block of commented-out lines of code should be removed.(Ž»æÏøÿÿÿÿ
+M
+java:S1135e"2Complete the task associated to this TODO comment.(¸Î²ùýÿÿÿÿ
+V	java:S125i"<This block of commented-out lines of code should be removed.(”ƒ¬Êüÿÿÿÿ
+Q	java:S125m"<This block of commented-out lines of code should be removed.(¡“òÝ

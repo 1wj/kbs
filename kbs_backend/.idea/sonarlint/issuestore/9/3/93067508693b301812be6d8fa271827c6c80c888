@@ -1,0 +1,84 @@
+
+\
+java:S1854s":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ8¥ù˜†0
+n
+java:S1192š"KDefine a constant instead of duplicating this literal "pagination" 6 times.(‡ª¹¿şÿÿÿÿ8¥ù˜†0
+s
+java:S1192Ê"PDefine a constant instead of duplicating this literal "attachment_info" 4 times.(Ô¤×üÿÿÿÿ8µˆÏÿ0
+h
+java:S1192·"LDefine a constant instead of duplicating this literal "create_time" 4 times.(¯³ë³øÿÿÿÿ
+i
+java:S1192·"MDefine a constant instead of duplicating this literal "release_time" 3 times.(¯³ë³øÿÿÿÿ
+r
+java:S1192¦"ODefine a constant instead of duplicating this literal "knowledge_info" 4 times.(®ÿŒøşÿÿÿÿ8¥ù˜†0
+H
+java:S1135#"2Complete the task associated to this TODO comment.(™Ï¦»
+q
+java:S1192¯"NDefine a constant instead of duplicating this literal "solution_name" 3 times.(ì¦ÜÄıÿÿÿÿ8Ó¤¯ı0
+n
+java:S1192²"PDefine a constant instead of duplicating this literal "knowledge_title" 5 times.(éğ¶’8¥ù˜†0
+X	java:S125?"<This block of commented-out lines of code should be removed.(üœû½8Ò´¾†0
+p
+java:S3776¤"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ºîƒ–8¥ù˜†0
+s
+java:S1192¸"PDefine a constant instead of duplicating this literal "doc_view_number" 3 times.(‹¦Òóıÿÿÿÿ8¥ù˜†0
+m
+java:S1192ƒ"JDefine a constant instead of duplicating this literal "file_info" 3 times.(õ½ şüÿÿÿÿ8˜†¥0
+k
+java:S1192"MDefine a constant instead of duplicating this literal "knowledge_no" 5 times.(°ÌÀ™8¥ù˜†0
+c
+java:S1192±"MDefine a constant instead of duplicating this literal "knowledge_id" 3 times.(¨£—
+h
+java:S1192¯"JDefine a constant instead of duplicating this literal "data_type" 4 times.(Ûá™8¥ù˜†0
+\
+java:S1854[":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ8¥ù˜†0
+l
+java:S1192¸"IDefine a constant instead of duplicating this literal "read_num" 3 times.(‹¦Òóıÿÿÿÿ8¥ù˜†0
+\
+java:S1854d":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ8¥ù˜†0
+[
+java:S1144Õ"=Remove this unused private "processResponseForDetail" method.(¸¹ëÜ8˜†¥0
+e
+java:S1192³"ODefine a constant instead of duplicating this literal "knowledge_desc" 6 times.(»´¤
+g
+java:S1192Á"IDefine a constant instead of duplicating this literal "tag_name" 7 times.(Ú¢Şğ8¥ù˜†0
+o
+java:S1192ì"QDefine a constant instead of duplicating this literal "question_picture" 4 times.(àëÿ˜8˜†¥0
+y
+java:S1192Ç"VDefine a constant instead of duplicating this literal "knowledge_description" 3 times.(È³æıÿÿÿÿ8¯ª®ı0
+]
+java:S1854":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ8¥ù˜†0
+q
+java:S1192¬"TDefine a constant instead of duplicating this literal "knowledge_customize" 3 times.(”ıö'8ç¤§ı0
+f
+java:S1192²"ODefine a constant instead of duplicating this literal "knowledge_name" 6 times.(éğ¶’
+r
+java:S1192Ä"TDefine a constant instead of duplicating this literal "question_basic_info" 7 times.(¸Ê²ş8¥ù˜†0
+a
+java:S1155§">Use isEmpty() to check whether the collection is empty or not.(ï¼³‰ÿÿÿÿÿ8¥ù˜†0
+U
+java:S1854"":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ
+g
+java:S4143™"DVerify this is the key that was intended; it was already set before.(¿•¼×úÿÿÿÿ8¥ù˜†0
+\
+java:S1854J":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ8¥ù˜†0
+r
+java:S1192´"ODefine a constant instead of duplicating this literal "highlight_info" 4 times.(°ï¯”ıÿÿÿÿ8¥ù˜†0
+k
+java:S1192»"ODefine a constant instead of duplicating this literal "knowledge_base" 4 times.(‹ØİŞúÿÿÿÿ
+\
+java:S1854-":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ8Ú½°†0
+m
+java:S1192’"ODefine a constant instead of duplicating this literal "knowledge_type" 4 times.(ì‰–Ç8¥ù˜†0
+q
+java:S1192¼"NDefine a constant instead of duplicating this literal "knowledge_tag" 4 times.(œ‡¹ˆúÿÿÿÿ8¥ù˜†0
+U
+java:S18547":Remove this useless assignment to local variable "result".(Ù¬×¢şÿÿÿÿ
+f
+java:S1192Á"HDefine a constant instead of duplicating this literal "tagName" 3 times.(Ú¢Şğ8¥ù˜†0
+a
+java:S1155‡">Use isEmpty() to check whether the collection is empty or not.(ï¼³‰ÿÿÿÿÿ8¥ù˜†0
+g
+java:S1192º"QDefine a constant instead of duplicating this literal "knowledge_source" 8 times.(¾”Î0
+p
+java:S3776Õ"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¸¹ëÜ8˜†¥0

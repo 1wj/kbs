@@ -1,0 +1,15 @@
+
+u
+java:S1488-"_Immediately return this expression instead of assigning it to the temporary variable "message".(ı½ÈÓ
+u
+java:S1488"_Immediately return this expression instead of assigning it to the temporary variable "message".(ÑŸ´ 
+z
+java:S1488:"_Immediately return this expression instead of assigning it to the temporary variable "message".(®ŒçØúÿÿÿÿ
+N
+java:S3878-"8Remove this array creation and simply pass the elements.(ı½ÈÓ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(º¿Ğù
+u
+java:S1488!"_Immediately return this expression instead of assigning it to the temporary variable "message".(ù÷§ó
+N
+java:S3878"8Remove this array creation and simply pass the elements.(ÑŸ´ 

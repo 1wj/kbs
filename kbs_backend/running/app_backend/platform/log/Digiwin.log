@@ -1,0 +1,581 @@
+2022/06/10 10:23:37 INFO  [] log level: INFO
+2022/06/10 10:23:38 WARN  [] app.id is not available from System Property and /META-INF/app.properties. It is set to null
+2022/06/10 10:23:38 INFO  [] Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.
+2022/06/10 10:23:38 WARN  [] Meta server address fallback to http://apollo.meta for env UNKNOWN, because it is not available in all MetaServerProviders
+2022/06/10 10:23:43 INFO  [] is hook remote log4j2.xml: true
+2022/06/10 10:23:43 INFO  [] LogFactory implement: commons-logging
+2022/06/10 10:23:43 INFO  [] Log implement: DWExtendedLogger
+2022/06/10 10:23:43 INFO  [] HV000001: Hibernate Validator 6.0.9.Final
+2022/06/10 10:23:43 INFO  [] DWPropertySourceAppContextInitializer.....
+2022/06/10 10:23:43 INFO  [] Starting DWApiGatewayApplication v4.1.0.1004 on H-17783 with PID 1516 (E:\kbs\kbs_backend\running\app_backend\platform\lib\dwapiplatform-springboot-4.1.0.1004.jar started by Wj in E:\kbs\kbs_backend\running\app_backend)
+2022/06/10 10:23:43 INFO  [] No active profile set, falling back to default profiles: default
+2022/06/10 10:23:43 INFO  [] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d000e80: startup date [Fri Jun 10 10:23:43 CST 2022]; root of context hierarchy
+2022/06/10 10:23:45 INFO  [] Overriding bean definition for bean 'websocketContainerCustomizer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$UndertowWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$UndertowWebSocketConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration.class]]
+2022/06/10 10:23:45 INFO  [] log level: INFO
+2022/06/10 10:23:45 INFO  [] DWModuleDWServiceProcessor start to search DWService...
+2022/06/10 10:23:46 INFO  [] >>> Found Header 1.group=RequestHelper, service name=IModuleInfoService, type=com.digiwin.app.requesthelper.service.IModuleInfoService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 2.group=DWSys, service name=ILoginService, type=com.digiwin.dwapi.dwsys.service.ILoginService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 3.group=DWSys, service name=ITestJobService, type=com.digiwin.dwapi.dwsys.service.ITestJobService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 4.group=DWSys, service name=ISystemInfoService, type=com.digiwin.dwapi.dwsys.service.ISystemInfoService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 5.group=DWSys, service name=IOrgService, type=com.digiwin.dwapi.dwsys.service.IOrgService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 6.group=DWSys, service name=IQueryService, type=com.digiwin.dwapi.dwsys.service.IQueryService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 7.group=DWSys, service name=IFunctionPermissionService, type=com.digiwin.dwapi.dwsys.service.IFunctionPermissionService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 8.group=DWSys, service name=ICheckJob, type=com.digiwin.dwapi.dwsys.service.ICheckJob
+2022/06/10 10:23:46 INFO  [] >>> Found Header 9.group=DWSys, service name=IMyHomeService, type=com.digiwin.dwapi.dwsys.service.IMyHomeService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 10.group=DWSys, service name=IDMCService, type=com.digiwin.dwapi.dwsys.service.IDMCService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 11.group=DWSys, service name=IThemeService, type=com.digiwin.dwapi.dwsys.service.IThemeService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 12.group=DWSys, service name=IServiceInfoService, type=com.digiwin.dwapi.dwsys.service.IServiceInfoService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 13.group=DWSys, service name=IMetadataService, type=com.digiwin.dwapi.dwsys.service.IMetadataService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 14.group=DWSys, service name=IUserService, type=com.digiwin.dwapi.dwsys.service.IUserService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 15.group=DWSys, service name=IHealthCheckingService, type=com.digiwin.dwapi.dwsys.service.IHealthCheckingService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 16.group=DWSys, service name=IReportService, type=com.digiwin.dwapi.dwsys.service.IReportService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 17.group=DWSys, service name=IOnPremisesUpdateService, type=com.digiwin.dwapi.dwsys.service.IOnPremisesUpdateService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 18.group=DWSys, service name=IOperateLogService, type=com.digiwin.dwapi.dwsys.service.IOperateLogService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 19.group=DWSys, service name=IReleaseService, type=com.digiwin.dwapi.dwsys.service.IReleaseService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 20.group=DWSys, service name=IDocumentIdService, type=com.digiwin.dwapi.dwsys.service.IDocumentIdService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 21.group=DWSys, service name=ICheckResultReceiverService, type=com.digiwin.dwapi.dwsys.service.ICheckResultReceiverService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 22.group=DWSys, service name=IMenuService, type=com.digiwin.dwapi.dwsys.service.IMenuService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 23.group=DWSys, service name=IScheduleService, type=com.digiwin.dwapi.dwsys.service.IScheduleService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 24.group=DWSys, service name=ICustomColumnService, type=com.digiwin.dwapi.dwsys.service.ICustomColumnService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 25.group=DWSys, service name=ILogService, type=com.digiwin.dwapi.dwsys.service.ILogService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 26.group=DWSys, service name=ICustomizeFieldService, type=com.digiwin.dwapi.dwsys.service.ICustomizeFieldService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 27.group=DWSys, service name=ITenantScheduleBatchService, type=com.digiwin.dwapi.dwsys.service.ITenantScheduleBatchService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 28.group=kbs, service name=IDocRestFulService, type=com.digiwin.app.kbs.service.mws.restful.IDocRestFulService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 29.group=kbs, service name=ITagClassificationService, type=com.digiwin.app.kbs.service.mws.restful.ITagClassificationService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 30.group=kbs, service name=ITestService, type=com.digiwin.app.kbs.service.mws.restful.ITestService
+2022/06/10 10:23:46 INFO  [] >>> Found Header 31.group=kbs, service name=IToKmoService, type=com.digiwin.app.kbs.service.mws.restful.IToKmoService
+2022/06/10 10:23:46 INFO  [] Register DWLocalHeaderRepository, group name=RequestHelper, header count=1
+2022/06/10 10:23:46 INFO  [] Register DWLocalHeaderRepository, group name=DWSys, header count=26
+2022/06/10 10:23:46 INFO  [] Register DWLocalHeaderRepository, group name=kbs, header count=4
+2022/06/10 10:23:46 INFO  [] Register DWRestfulHeaderRepository, group name=kbs, header count=4
+2022/06/10 10:23:46 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.IDocRestFulService
+2022/06/10 10:23:46 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.ITagClassificationService
+2022/06/10 10:23:46 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.ITestService
+2022/06/10 10:23:46 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.IToKmoService
+2022/06/10 10:23:46 INFO  [] Overriding bean definition for bean 'eaiController' with a different definition: replacing [Generic bean: class [com.digiwin.gateway.controller.EaiController]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/E:/kbs/kbs_backend/running/app_backend/platform/lib/dwapiplatform-springboot-4.1.0.1004.jar!/com/digiwin/gateway/controller/EaiController.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.digiwin.app.autoconfigure.DWEAIRestfulUrlRegisterAutoConfiguration$BioConfiguration; factoryMethodName=eaiController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/digiwin/app/autoconfigure/DWEAIRestfulUrlRegisterAutoConfiguration$BioConfiguration.class]]
+2022/06/10 10:23:46 INFO  [] Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [com.digiwin.app.autoconfigurer.DWModularPropertySourceAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/digiwin/app/autoconfigurer/DWModularPropertySourceAutoConfiguration.class]]
+2022/06/10 10:23:47 INFO  [] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022/06/10 10:23:47 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWDefaultServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 10:23:47 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWRestfulStandardServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 10:23:47 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWEAIServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 10:23:47 INFO  [] -DWMobileInitializationEvent-check required property's key->mobileApiInit=
+2022/06/10 10:23:47 INFO  [] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022/06/10 10:23:47 INFO  [] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022/06/10 10:23:47 INFO  [] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 10:23:48 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration$$EnhancerBySpringCGLIB$$d4b144c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'dao-LocalValidatorFactoryBean' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$270f737c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWDaoAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWDaoAutoConfiguration$$EnhancerBySpringCGLIB$$7f797c13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'daoMultiTenancyInterceptor' of type [com.digiwin.app.dao.MultiTenancyInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'daoMultiTenancyAdvisor' of type [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWCacheAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWCacheAutoConfiguration$$EnhancerBySpringCGLIB$$dca3b4e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'dwCacheKeyGenerator' of type [org.springframework.beans.factory.support.NullBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'org.springframework.cache.jcache.config.ProxyJCacheConfiguration' of type [org.springframework.cache.jcache.config.ProxyJCacheConfiguration$$EnhancerBySpringCGLIB$$495735fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$7021a99a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:48 INFO  [] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$92012eab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:23:49 INFO  [] Tomcat initialized with port(s): 8085 (http)
+2022/06/10 10:23:49 INFO  [] Root WebApplicationContext: initialization completed in 6109 ms
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'sidecarProtocalFilter' to urls: [/sidecar/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'characterEncodingFilter' to: [/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'standardHeaderFilter' to urls: [/restful/*, /api/app/tenant/expired/notices, /api/app/tenant/renew/notices, /api/app/initialize, /api/app/tenant/datasource/update]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'requestContextFilter' to: [/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'DWMethodLocateFilter' to urls: [/restful/service/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'DWRestfulMethodLocateFilter' to urls: [/restful/standard/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'eaiHealthCheckFilter' to urls: [/eai]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'DWEaiServiceMethodLocateFilter' to urls: [/eai]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'DWEaiCallbackMethodLocateFilter' to urls: [/eai/callback]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'tokenAllowAnonymousFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'tokenFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'requestStandardizationFilter' to urls: [/restful/service/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'logContextFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'httpTraceFilter' to: [/*]
+2022/06/10 10:23:52 INFO  [] Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2022/06/10 10:23:52 INFO  [] Servlet dispatcherServlet mapped to [/]
+2022/06/10 10:23:52 INFO  [] Mapped "{[/api/app/tenant/datasource/update],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantDataSourceController.updateDataSource() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/api/app/tenant/renew/notices],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantScheduleController.startSchedule() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/api/app/tenant/expired/notices],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantScheduleController.stopSchedule() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/restful/service/**],methods=[GET || POST || PATCH || PUT || DELETE]}" onto public java.lang.Object com.digiwin.gateway.controller.GatewayController.execute() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/restful/standard/**]}" onto public java.lang.Object com.digiwin.gateway.controller.GatewayController.restful() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/api/app/initialize],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWInitializationController.initialize() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022/06/10 10:23:52 INFO  [] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022/06/10 10:23:52 INFO  [] Mapped "{[/eai],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.eai()
+2022/06/10 10:23:52 INFO  [] Mapped "{[/eai/callback],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.callback() throws java.lang.Exception
+2022/06/10 10:23:52 INFO  [] Mapped "{[/eai/syncProd],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.syncProd() throws java.lang.Exception
+2022/06/10 10:23:53 INFO  [] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022/06/10 10:23:54 INFO  [] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d000e80: startup date [Fri Jun 10 10:23:43 CST 2022]; root of context hierarchy
+2022/06/10 10:23:54 INFO  [] Detected @ExceptionHandler methods in exceptionFilter
+2022/06/10 10:23:55 INFO  [] Loading XML bean definitions from InputStream resource [resource loaded through InputStream]
+2022/06/10 10:23:55 INFO  [] Refreshing org.springframework.context.support.GenericXmlApplicationContext@180f33b2: startup date [Fri Jun 10 10:23:55 CST 2022]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d000e80
+2022/06/10 10:23:55 INFO  [] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 10:23:56 INFO  [] [DWMqttConfiguration] platform.properties:mqttSrvHost:, mqtt enabled=false
+2022/06/10 10:23:56 INFO  [] Initializing ExecutorService  'taskScheduler'
+2022/06/10 10:23:57 INFO  [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022/06/10 10:23:57 INFO  [] Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2022/06/10 10:23:57 INFO  [] Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2022/06/10 10:23:57 INFO  [] Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022/06/10 10:23:57 INFO  [] Registering beans for JMX exposure on startup
+2022/06/10 10:23:57 INFO  [] Bean with name 'dw-dataSource' has been autodetected for JMX exposure
+2022/06/10 10:23:57 INFO  [] Located MBean 'dw-dataSource': registering with JMX server as MBean [org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource]
+2022/06/10 10:23:57 INFO  [] Starting beans in phase 0
+2022/06/10 10:23:57 INFO  [] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022/06/10 10:23:57 INFO  [] Channel 'application.errorChannel' has 1 subscriber(s).
+2022/06/10 10:23:57 INFO  [] started _org.springframework.integration.errorLogger
+2022/06/10 10:23:57 INFO  [] Tomcat started on port(s): 8085 (http) with context path ''
+2022/06/10 10:23:57 INFO  [] Started DWApiGatewayApplication in 21.115 seconds (JVM running for 24.605)
+2022/06/10 10:24:32 INFO  [] FrameworkServlet 'dispatcherServlet': initialization started
+2022/06/10 10:24:32 INFO  [] FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2022/06/10 10:24:43 INFO  [84456dca73de4e878a1884980d15752a] Loading XML bean definitions from InputStream resource [resource loaded through InputStream]
+2022/06/10 10:24:43 INFO  [84456dca73de4e878a1884980d15752a] Loading XML bean definitions from class path resource [spring-database.xml]
+2022/06/10 10:24:43 INFO  [84456dca73de4e878a1884980d15752a] Refreshing org.springframework.context.support.GenericXmlApplicationContext@66803e55: startup date [Fri Jun 10 10:24:43 CST 2022]; parent: org.springframework.context.support.GenericXmlApplicationContext@180f33b2
+2022/06/10 10:24:43 INFO  [84456dca73de4e878a1884980d15752a] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022/06/10 10:24:43 WARN  [84456dca73de4e878a1884980d15752a] No MyBatis mapper was found in '[com.digiwin.app.kbs.service.meta.mysql.kgapp.mapper]' package. Please check your configuration.
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration$$EnhancerBySpringCGLIB$$d4b144c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'dao-LocalValidatorFactoryBean' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'com.digiwin.app.autoconfigure.actuate.DWModuleLayerHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.DWModuleLayerHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$f4cf204d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$d61cfc11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'dwModuleDataSourceBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$dbf14636] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'dwModuleRabbitTemplateBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$1f88cc09] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:44 INFO  [84456dca73de4e878a1884980d15752a] Bean 'dwModuleRedisBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 10:24:47 INFO  [84456dca73de4e878a1884980d15752a] Cluster created with settings {hosts=[192.168.8.227:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2022/06/10 10:24:47 INFO  [] Opened connection [connectionId{localValue:1, serverValue:59}] to 192.168.8.227:27017
+2022/06/10 10:24:47 INFO  [] Monitor thread successfully connected to server with description ServerDescription{address=192.168.8.227:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 6]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10037100}
+2022/06/10 10:24:47 INFO  [84456dca73de4e878a1884980d15752a] Method [java.util.List org.springframework.data.mongodb.core.MongoTemplate.doFind(java.lang.String,org.bson.Document,org.bson.Document,java.lang.Class,java.lang.Class,org.springframework.data.mongodb.core.CursorPreparer)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2022/06/10 10:24:47 INFO  [84456dca73de4e878a1884980d15752a] Method [java.lang.String org.springframework.data.mongodb.core.MongoTemplate.determineCollectionName(java.lang.Class)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2022/06/10 10:24:48 INFO  [84456dca73de4e878a1884980d15752a] Opened connection [connectionId{localValue:2, serverValue:60}] to 192.168.8.227:27017
+2022/06/10 10:24:48 INFO  [84456dca73de4e878a1884980d15752a] io>invoke[1654827888837]{38}>com.digiwin.app.kbs.service.impl.mws.ToKmoService.knowledgeDetail(messageBody) input: ({
+    "knowledge_info": 
+    {
+        "knowledge_id": "62399cb5483e7f06c9b56736"
+    }
+}
+    )
+2022/06/10 10:24:51 INFO  [84456dca73de4e878a1884980d15752a] io>result[1654827888837]{38}>com.digiwin.app.service.DWServiceResult@1d0f12cc
+2022/06/10 10:35:47 INFO  [] Closed connection [connectionId{localValue:2, serverValue:60}] to 192.168.8.227:27017 because it is past its maximum allowed idle time.
+2022/06/10 10:40:46 INFO  [7bd827320e8d494591113a7e2eac0251] io>invoke[1654828846174]{41}>com.digiwin.app.kbs.service.impl.mws.ToKmoService.knowledgeDetail(messageBody) input: ({
+    "knowledge_info": 
+    {
+        "knowledge_id": "62399cb5483e7f06c9b56736"
+    }
+}
+    )
+2022/06/10 10:50:44 INFO  [7bd827320e8d494591113a7e2eac0251] io>result[1654828846174]{41}>com.digiwin.app.service.DWServiceResult@5a5723c5
+2022/06/10 10:53:10 INFO  [99d0a0d963d14fdda425edf80b6e0b2d] io>invoke[1654829590427]{43}>com.digiwin.app.kbs.service.impl.mws.ToKmoService.knowledgeDetail(messageBody) input: ({
+    "knowledge_info": 
+    {
+        "knowledge_id": "62399cb5483e7f06c9b56736"
+    }
+}
+    )
+2022/06/10 10:55:51 INFO  [99d0a0d963d14fdda425edf80b6e0b2d] io>result[1654829590427]{43}>com.digiwin.app.service.DWServiceResult@44ae3d2
+2022/06/10 11:03:06 INFO  [] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2d000e80: startup date [Fri Jun 10 10:23:43 CST 2022]; root of context hierarchy
+2022/06/10 11:03:06 INFO  [] Stopping beans in phase 0
+2022/06/10 11:03:06 INFO  [] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022/06/10 11:03:06 INFO  [] Channel 'application.errorChannel' has 0 subscriber(s).
+2022/06/10 11:03:06 INFO  [] stopped _org.springframework.integration.errorLogger
+2022/06/10 11:03:06 INFO  [] Shutting down ExecutorService 'taskScheduler'
+2022/06/10 11:03:06 INFO  [] Unregistering JMX-exposed beans on shutdown
+2022/06/10 11:03:06 INFO  [] Unregistering JMX-exposed beans
+2022/06/10 11:03:06 WARN  [] Failed to unregister the JMX name: org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource
+javax.management.InstanceNotFoundException: org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1095) ~[?:1.8.0_131]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.exclusiveUnregisterMBean(DefaultMBeanServerInterceptor.java:427) ~[?:1.8.0_131]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.unregisterMBean(DefaultMBeanServerInterceptor.java:415) ~[?:1.8.0_131]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.unregisterMBean(JmxMBeanServer.java:546) ~[?:1.8.0_131]
+	at org.apache.commons.dbcp2.BasicDataSource.close(BasicDataSource.java:1941) [commons-dbcp2-2.2.0.jar:2.2.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:577) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:549) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+2022/06/10 11:06:17 INFO  [] log level: INFO
+2022/06/10 11:06:17 WARN  [] app.id is not available from System Property and /META-INF/app.properties. It is set to null
+2022/06/10 11:06:17 INFO  [] Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.
+2022/06/10 11:06:18 WARN  [] Meta server address fallback to http://apollo.meta for env UNKNOWN, because it is not available in all MetaServerProviders
+2022/06/10 11:06:33 INFO  [] is hook remote log4j2.xml: true
+2022/06/10 11:06:33 INFO  [] LogFactory implement: commons-logging
+2022/06/10 11:06:33 INFO  [] Log implement: DWExtendedLogger
+2022/06/10 11:06:33 INFO  [] HV000001: Hibernate Validator 6.0.9.Final
+2022/06/10 11:06:33 INFO  [] DWPropertySourceAppContextInitializer.....
+2022/06/10 11:06:33 INFO  [] Starting DWApiGatewayApplication v4.1.0.1004 on H-17783 with PID 8104 (E:\kbs\kbs_backend\running\app_backend\platform\lib\dwapiplatform-springboot-4.1.0.1004.jar started by Wj in E:\kbs\kbs_backend\running\app_backend)
+2022/06/10 11:06:33 INFO  [] No active profile set, falling back to default profiles: default
+2022/06/10 11:06:33 INFO  [] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@29a69a35: startup date [Fri Jun 10 11:06:33 CST 2022]; root of context hierarchy
+2022/06/10 11:06:35 INFO  [] Overriding bean definition for bean 'websocketContainerCustomizer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$UndertowWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$UndertowWebSocketConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration.class]]
+2022/06/10 11:06:35 INFO  [] log level: INFO
+2022/06/10 11:06:36 INFO  [] DWModuleDWServiceProcessor start to search DWService...
+2022/06/10 11:06:36 INFO  [] >>> Found Header 1.group=RequestHelper, service name=IModuleInfoService, type=com.digiwin.app.requesthelper.service.IModuleInfoService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 2.group=DWSys, service name=ILoginService, type=com.digiwin.dwapi.dwsys.service.ILoginService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 3.group=DWSys, service name=ITestJobService, type=com.digiwin.dwapi.dwsys.service.ITestJobService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 4.group=DWSys, service name=ISystemInfoService, type=com.digiwin.dwapi.dwsys.service.ISystemInfoService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 5.group=DWSys, service name=IOrgService, type=com.digiwin.dwapi.dwsys.service.IOrgService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 6.group=DWSys, service name=IQueryService, type=com.digiwin.dwapi.dwsys.service.IQueryService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 7.group=DWSys, service name=IFunctionPermissionService, type=com.digiwin.dwapi.dwsys.service.IFunctionPermissionService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 8.group=DWSys, service name=ICheckJob, type=com.digiwin.dwapi.dwsys.service.ICheckJob
+2022/06/10 11:06:36 INFO  [] >>> Found Header 9.group=DWSys, service name=IMyHomeService, type=com.digiwin.dwapi.dwsys.service.IMyHomeService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 10.group=DWSys, service name=IDMCService, type=com.digiwin.dwapi.dwsys.service.IDMCService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 11.group=DWSys, service name=IThemeService, type=com.digiwin.dwapi.dwsys.service.IThemeService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 12.group=DWSys, service name=IServiceInfoService, type=com.digiwin.dwapi.dwsys.service.IServiceInfoService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 13.group=DWSys, service name=IMetadataService, type=com.digiwin.dwapi.dwsys.service.IMetadataService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 14.group=DWSys, service name=IUserService, type=com.digiwin.dwapi.dwsys.service.IUserService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 15.group=DWSys, service name=IHealthCheckingService, type=com.digiwin.dwapi.dwsys.service.IHealthCheckingService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 16.group=DWSys, service name=IReportService, type=com.digiwin.dwapi.dwsys.service.IReportService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 17.group=DWSys, service name=IOnPremisesUpdateService, type=com.digiwin.dwapi.dwsys.service.IOnPremisesUpdateService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 18.group=DWSys, service name=IOperateLogService, type=com.digiwin.dwapi.dwsys.service.IOperateLogService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 19.group=DWSys, service name=IReleaseService, type=com.digiwin.dwapi.dwsys.service.IReleaseService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 20.group=DWSys, service name=IDocumentIdService, type=com.digiwin.dwapi.dwsys.service.IDocumentIdService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 21.group=DWSys, service name=ICheckResultReceiverService, type=com.digiwin.dwapi.dwsys.service.ICheckResultReceiverService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 22.group=DWSys, service name=IMenuService, type=com.digiwin.dwapi.dwsys.service.IMenuService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 23.group=DWSys, service name=IScheduleService, type=com.digiwin.dwapi.dwsys.service.IScheduleService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 24.group=DWSys, service name=ICustomColumnService, type=com.digiwin.dwapi.dwsys.service.ICustomColumnService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 25.group=DWSys, service name=ILogService, type=com.digiwin.dwapi.dwsys.service.ILogService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 26.group=DWSys, service name=ICustomizeFieldService, type=com.digiwin.dwapi.dwsys.service.ICustomizeFieldService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 27.group=DWSys, service name=ITenantScheduleBatchService, type=com.digiwin.dwapi.dwsys.service.ITenantScheduleBatchService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 28.group=kbs, service name=IDocRestFulService, type=com.digiwin.app.kbs.service.mws.restful.IDocRestFulService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 29.group=kbs, service name=ITagClassificationService, type=com.digiwin.app.kbs.service.mws.restful.ITagClassificationService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 30.group=kbs, service name=ITestService, type=com.digiwin.app.kbs.service.mws.restful.ITestService
+2022/06/10 11:06:36 INFO  [] >>> Found Header 31.group=kbs, service name=IToKmoService, type=com.digiwin.app.kbs.service.mws.restful.IToKmoService
+2022/06/10 11:06:36 INFO  [] Register DWLocalHeaderRepository, group name=RequestHelper, header count=1
+2022/06/10 11:06:36 INFO  [] Register DWLocalHeaderRepository, group name=DWSys, header count=26
+2022/06/10 11:06:36 INFO  [] Register DWLocalHeaderRepository, group name=kbs, header count=4
+2022/06/10 11:06:36 INFO  [] Register DWRestfulHeaderRepository, group name=kbs, header count=4
+2022/06/10 11:06:36 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.IDocRestFulService
+2022/06/10 11:06:36 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.ITagClassificationService
+2022/06/10 11:06:36 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.ITestService
+2022/06/10 11:06:36 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.IToKmoService
+2022/06/10 11:06:36 INFO  [] Overriding bean definition for bean 'eaiController' with a different definition: replacing [Generic bean: class [com.digiwin.gateway.controller.EaiController]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/E:/kbs/kbs_backend/running/app_backend/platform/lib/dwapiplatform-springboot-4.1.0.1004.jar!/com/digiwin/gateway/controller/EaiController.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.digiwin.app.autoconfigure.DWEAIRestfulUrlRegisterAutoConfiguration$BioConfiguration; factoryMethodName=eaiController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/digiwin/app/autoconfigure/DWEAIRestfulUrlRegisterAutoConfiguration$BioConfiguration.class]]
+2022/06/10 11:06:36 INFO  [] Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [com.digiwin.app.autoconfigurer.DWModularPropertySourceAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/digiwin/app/autoconfigurer/DWModularPropertySourceAutoConfiguration.class]]
+2022/06/10 11:06:36 INFO  [] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022/06/10 11:06:36 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWDefaultServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 11:06:36 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWRestfulStandardServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 11:06:36 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWEAIServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 11:06:37 INFO  [] -DWMobileInitializationEvent-check required property's key->mobileApiInit=
+2022/06/10 11:06:37 INFO  [] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022/06/10 11:06:37 INFO  [] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022/06/10 11:06:37 INFO  [] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 11:06:37 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration$$EnhancerBySpringCGLIB$$c05b3d5c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:37 INFO  [] Bean 'dao-LocalValidatorFactoryBean' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:37 INFO  [] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$12b96c12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:37 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWDaoAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWDaoAutoConfiguration$$EnhancerBySpringCGLIB$$6b2374a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:37 INFO  [] Bean 'daoMultiTenancyInterceptor' of type [com.digiwin.app.dao.MultiTenancyInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:37 INFO  [] Bean 'daoMultiTenancyAdvisor' of type [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:37 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWCacheAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWCacheAutoConfiguration$$EnhancerBySpringCGLIB$$c84dad79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:38 INFO  [] Bean 'dwCacheKeyGenerator' of type [org.springframework.beans.factory.support.NullBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:38 INFO  [] Bean 'org.springframework.cache.jcache.config.ProxyJCacheConfiguration' of type [org.springframework.cache.jcache.config.ProxyJCacheConfiguration$$EnhancerBySpringCGLIB$$35012e90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:38 INFO  [] Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$5bcba230] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:38 INFO  [] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$7dab2741] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:39 INFO  [] Tomcat initialized with port(s): 8085 (http)
+2022/06/10 11:06:39 INFO  [] Root WebApplicationContext: initialization completed in 5382 ms
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'sidecarProtocalFilter' to urls: [/sidecar/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'characterEncodingFilter' to: [/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'standardHeaderFilter' to urls: [/restful/*, /api/app/tenant/expired/notices, /api/app/tenant/renew/notices, /api/app/initialize, /api/app/tenant/datasource/update]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'requestContextFilter' to: [/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'DWMethodLocateFilter' to urls: [/restful/service/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'DWRestfulMethodLocateFilter' to urls: [/restful/standard/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'eaiHealthCheckFilter' to urls: [/eai]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'DWEaiServiceMethodLocateFilter' to urls: [/eai]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'DWEaiCallbackMethodLocateFilter' to urls: [/eai/callback]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'tokenAllowAnonymousFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'tokenFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'requestStandardizationFilter' to urls: [/restful/service/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'logContextFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'httpTraceFilter' to: [/*]
+2022/06/10 11:06:41 INFO  [] Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2022/06/10 11:06:41 INFO  [] Servlet dispatcherServlet mapped to [/]
+2022/06/10 11:06:42 INFO  [] Mapped "{[/api/app/tenant/datasource/update],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantDataSourceController.updateDataSource() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/api/app/tenant/expired/notices],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantScheduleController.stopSchedule() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/api/app/tenant/renew/notices],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantScheduleController.startSchedule() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/restful/service/**],methods=[GET || POST || PATCH || PUT || DELETE]}" onto public java.lang.Object com.digiwin.gateway.controller.GatewayController.execute() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/restful/standard/**]}" onto public java.lang.Object com.digiwin.gateway.controller.GatewayController.restful() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/api/app/initialize],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWInitializationController.initialize() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022/06/10 11:06:42 INFO  [] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022/06/10 11:06:42 INFO  [] Mapped "{[/eai],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.eai()
+2022/06/10 11:06:42 INFO  [] Mapped "{[/eai/callback],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.callback() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped "{[/eai/syncProd],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.syncProd() throws java.lang.Exception
+2022/06/10 11:06:42 INFO  [] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022/06/10 11:06:42 INFO  [] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@29a69a35: startup date [Fri Jun 10 11:06:33 CST 2022]; root of context hierarchy
+2022/06/10 11:06:42 INFO  [] Detected @ExceptionHandler methods in exceptionFilter
+2022/06/10 11:06:43 INFO  [] Loading XML bean definitions from InputStream resource [resource loaded through InputStream]
+2022/06/10 11:06:43 INFO  [] Refreshing org.springframework.context.support.GenericXmlApplicationContext@2b464384: startup date [Fri Jun 10 11:06:43 CST 2022]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@29a69a35
+2022/06/10 11:06:43 INFO  [] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 11:06:43 INFO  [] [DWMqttConfiguration] platform.properties:mqttSrvHost:, mqtt enabled=false
+2022/06/10 11:06:44 INFO  [] Initializing ExecutorService  'taskScheduler'
+2022/06/10 11:06:44 INFO  [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022/06/10 11:06:44 INFO  [] Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2022/06/10 11:06:44 INFO  [] Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2022/06/10 11:06:44 INFO  [] Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022/06/10 11:06:44 INFO  [] Registering beans for JMX exposure on startup
+2022/06/10 11:06:44 INFO  [] Bean with name 'dw-dataSource' has been autodetected for JMX exposure
+2022/06/10 11:06:44 INFO  [] Located MBean 'dw-dataSource': registering with JMX server as MBean [org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource]
+2022/06/10 11:06:44 INFO  [] Starting beans in phase 0
+2022/06/10 11:06:44 INFO  [] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022/06/10 11:06:44 INFO  [] Channel 'application.errorChannel' has 1 subscriber(s).
+2022/06/10 11:06:44 INFO  [] started _org.springframework.integration.errorLogger
+2022/06/10 11:06:44 INFO  [] Tomcat started on port(s): 8085 (http) with context path ''
+2022/06/10 11:06:44 INFO  [] Started DWApiGatewayApplication in 28.013 seconds (JVM running for 29.797)
+2022/06/10 11:06:52 INFO  [] FrameworkServlet 'dispatcherServlet': initialization started
+2022/06/10 11:06:52 INFO  [] FrameworkServlet 'dispatcherServlet': initialization completed in 46 ms
+2022/06/10 11:06:53 INFO  [69d01cc6319a45a7bf199429eb8d898f] Loading XML bean definitions from InputStream resource [resource loaded through InputStream]
+2022/06/10 11:06:53 INFO  [69d01cc6319a45a7bf199429eb8d898f] Loading XML bean definitions from class path resource [spring-database.xml]
+2022/06/10 11:06:53 INFO  [69d01cc6319a45a7bf199429eb8d898f] Refreshing org.springframework.context.support.GenericXmlApplicationContext@77b3c84a: startup date [Fri Jun 10 11:06:53 CST 2022]; parent: org.springframework.context.support.GenericXmlApplicationContext@2b464384
+2022/06/10 11:06:53 INFO  [69d01cc6319a45a7bf199429eb8d898f] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022/06/10 11:06:54 WARN  [69d01cc6319a45a7bf199429eb8d898f] No MyBatis mapper was found in '[com.digiwin.app.kbs.service.meta.mysql.kgapp.mapper]' package. Please check your configuration.
+2022/06/10 11:06:54 INFO  [69d01cc6319a45a7bf199429eb8d898f] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 11:06:54 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration$$EnhancerBySpringCGLIB$$c05b3d5c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:54 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'dao-LocalValidatorFactoryBean' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:54 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:54 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'com.digiwin.app.autoconfigure.actuate.DWModuleLayerHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.DWModuleLayerHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$e07918e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:54 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$c1c6f4a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:55 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'dwModuleDataSourceBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:55 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$c79b3ecc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:55 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'dwModuleRabbitTemplateBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:55 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$b32c49f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:55 INFO  [69d01cc6319a45a7bf199429eb8d898f] Bean 'dwModuleRedisBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 11:06:57 INFO  [69d01cc6319a45a7bf199429eb8d898f] Cluster created with settings {hosts=[192.168.8.227:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2022/06/10 11:06:57 INFO  [] Opened connection [connectionId{localValue:1, serverValue:69}] to 192.168.8.227:27017
+2022/06/10 11:06:57 INFO  [] Monitor thread successfully connected to server with description ServerDescription{address=192.168.8.227:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 6]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11322200}
+2022/06/10 11:06:58 INFO  [69d01cc6319a45a7bf199429eb8d898f] Method [java.util.List org.springframework.data.mongodb.core.MongoTemplate.doFind(java.lang.String,org.bson.Document,org.bson.Document,java.lang.Class,java.lang.Class,org.springframework.data.mongodb.core.CursorPreparer)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2022/06/10 11:06:58 INFO  [69d01cc6319a45a7bf199429eb8d898f] Method [java.lang.String org.springframework.data.mongodb.core.MongoTemplate.determineCollectionName(java.lang.Class)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2022/06/10 11:07:03 INFO  [69d01cc6319a45a7bf199429eb8d898f] Opened connection [connectionId{localValue:2, serverValue:70}] to 192.168.8.227:27017
+2022/06/10 11:07:03 INFO  [69d01cc6319a45a7bf199429eb8d898f] io>invoke[1654830423643]{99}>com.digiwin.app.kbs.service.impl.mws.ToKmoService.knowledgeDetail(messageBody) input: ({
+    "knowledge_info": 
+    {
+        "knowledge_id": "62399cb5483e7f06c9b56736"
+    }
+}
+    )
+2022/06/10 11:07:19 INFO  [69d01cc6319a45a7bf199429eb8d898f] io>result[1654830423643]{99}>com.digiwin.app.service.DWServiceResult@26af7fbf
+2022/06/10 11:16:30 INFO  [] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@29a69a35: startup date [Fri Jun 10 11:06:33 CST 2022]; root of context hierarchy
+2022/06/10 11:16:30 INFO  [] Stopping beans in phase 0
+2022/06/10 11:16:30 INFO  [] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022/06/10 11:16:30 INFO  [] Channel 'application.errorChannel' has 0 subscriber(s).
+2022/06/10 11:16:30 INFO  [] stopped _org.springframework.integration.errorLogger
+2022/06/10 11:16:30 INFO  [] Shutting down ExecutorService 'taskScheduler'
+2022/06/10 11:16:30 INFO  [] Unregistering JMX-exposed beans on shutdown
+2022/06/10 11:16:30 INFO  [] Unregistering JMX-exposed beans
+2022/06/10 11:16:30 WARN  [] Failed to unregister the JMX name: org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource
+javax.management.InstanceNotFoundException: org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1095) ~[?:1.8.0_131]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.exclusiveUnregisterMBean(DefaultMBeanServerInterceptor.java:427) ~[?:1.8.0_131]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.unregisterMBean(DefaultMBeanServerInterceptor.java:415) ~[?:1.8.0_131]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.unregisterMBean(JmxMBeanServer.java:546) ~[?:1.8.0_131]
+	at org.apache.commons.dbcp2.BasicDataSource.close(BasicDataSource.java:1941) [commons-dbcp2-2.2.0.jar:2.2.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:577) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:549) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+2022/06/10 13:38:39 INFO  [] log level: INFO
+2022/06/10 13:38:39 WARN  [] app.id is not available from System Property and /META-INF/app.properties. It is set to null
+2022/06/10 13:38:39 INFO  [] Environment is set to null. Because it is not available in either (1) JVM system property 'env', (2) OS env variable 'ENV' nor (3) property 'env' from the properties InputStream.
+2022/06/10 13:38:39 WARN  [] Meta server address fallback to http://apollo.meta for env UNKNOWN, because it is not available in all MetaServerProviders
+2022/06/10 13:38:54 INFO  [] is hook remote log4j2.xml: true
+2022/06/10 13:38:54 INFO  [] LogFactory implement: commons-logging
+2022/06/10 13:38:54 INFO  [] Log implement: DWExtendedLogger
+2022/06/10 13:38:54 INFO  [] HV000001: Hibernate Validator 6.0.9.Final
+2022/06/10 13:38:54 INFO  [] DWPropertySourceAppContextInitializer.....
+2022/06/10 13:38:54 INFO  [] Starting DWApiGatewayApplication v4.1.0.1004 on H-17783 with PID 4252 (E:\kbs\kbs_backend\running\app_backend\platform\lib\dwapiplatform-springboot-4.1.0.1004.jar started by Wj in E:\kbs\kbs_backend\running\app_backend)
+2022/06/10 13:38:54 INFO  [] No active profile set, falling back to default profiles: default
+2022/06/10 13:38:55 INFO  [] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a9950f1: startup date [Fri Jun 10 13:38:55 CST 2022]; root of context hierarchy
+2022/06/10 13:38:56 INFO  [] Overriding bean definition for bean 'websocketContainerCustomizer' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$UndertowWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$UndertowWebSocketConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration; factoryMethodName=websocketContainerCustomizer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/websocket/servlet/WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration.class]]
+2022/06/10 13:38:56 INFO  [] log level: INFO
+2022/06/10 13:38:57 INFO  [] DWModuleDWServiceProcessor start to search DWService...
+2022/06/10 13:38:57 INFO  [] >>> Found Header 1.group=RequestHelper, service name=IModuleInfoService, type=com.digiwin.app.requesthelper.service.IModuleInfoService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 2.group=DWSys, service name=ILoginService, type=com.digiwin.dwapi.dwsys.service.ILoginService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 3.group=DWSys, service name=ITestJobService, type=com.digiwin.dwapi.dwsys.service.ITestJobService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 4.group=DWSys, service name=ISystemInfoService, type=com.digiwin.dwapi.dwsys.service.ISystemInfoService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 5.group=DWSys, service name=IOrgService, type=com.digiwin.dwapi.dwsys.service.IOrgService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 6.group=DWSys, service name=IQueryService, type=com.digiwin.dwapi.dwsys.service.IQueryService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 7.group=DWSys, service name=IFunctionPermissionService, type=com.digiwin.dwapi.dwsys.service.IFunctionPermissionService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 8.group=DWSys, service name=ICheckJob, type=com.digiwin.dwapi.dwsys.service.ICheckJob
+2022/06/10 13:38:57 INFO  [] >>> Found Header 9.group=DWSys, service name=IMyHomeService, type=com.digiwin.dwapi.dwsys.service.IMyHomeService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 10.group=DWSys, service name=IDMCService, type=com.digiwin.dwapi.dwsys.service.IDMCService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 11.group=DWSys, service name=IThemeService, type=com.digiwin.dwapi.dwsys.service.IThemeService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 12.group=DWSys, service name=IServiceInfoService, type=com.digiwin.dwapi.dwsys.service.IServiceInfoService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 13.group=DWSys, service name=IMetadataService, type=com.digiwin.dwapi.dwsys.service.IMetadataService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 14.group=DWSys, service name=IUserService, type=com.digiwin.dwapi.dwsys.service.IUserService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 15.group=DWSys, service name=IHealthCheckingService, type=com.digiwin.dwapi.dwsys.service.IHealthCheckingService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 16.group=DWSys, service name=IReportService, type=com.digiwin.dwapi.dwsys.service.IReportService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 17.group=DWSys, service name=IOnPremisesUpdateService, type=com.digiwin.dwapi.dwsys.service.IOnPremisesUpdateService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 18.group=DWSys, service name=IOperateLogService, type=com.digiwin.dwapi.dwsys.service.IOperateLogService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 19.group=DWSys, service name=IReleaseService, type=com.digiwin.dwapi.dwsys.service.IReleaseService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 20.group=DWSys, service name=IDocumentIdService, type=com.digiwin.dwapi.dwsys.service.IDocumentIdService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 21.group=DWSys, service name=ICheckResultReceiverService, type=com.digiwin.dwapi.dwsys.service.ICheckResultReceiverService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 22.group=DWSys, service name=IMenuService, type=com.digiwin.dwapi.dwsys.service.IMenuService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 23.group=DWSys, service name=IScheduleService, type=com.digiwin.dwapi.dwsys.service.IScheduleService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 24.group=DWSys, service name=ICustomColumnService, type=com.digiwin.dwapi.dwsys.service.ICustomColumnService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 25.group=DWSys, service name=ILogService, type=com.digiwin.dwapi.dwsys.service.ILogService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 26.group=DWSys, service name=ICustomizeFieldService, type=com.digiwin.dwapi.dwsys.service.ICustomizeFieldService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 27.group=DWSys, service name=ITenantScheduleBatchService, type=com.digiwin.dwapi.dwsys.service.ITenantScheduleBatchService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 28.group=kbs, service name=IDocRestFulService, type=com.digiwin.app.kbs.service.mws.restful.IDocRestFulService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 29.group=kbs, service name=ITagClassificationService, type=com.digiwin.app.kbs.service.mws.restful.ITagClassificationService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 30.group=kbs, service name=ITestService, type=com.digiwin.app.kbs.service.mws.restful.ITestService
+2022/06/10 13:38:57 INFO  [] >>> Found Header 31.group=kbs, service name=IToKmoService, type=com.digiwin.app.kbs.service.mws.restful.IToKmoService
+2022/06/10 13:38:57 INFO  [] Register DWLocalHeaderRepository, group name=RequestHelper, header count=1
+2022/06/10 13:38:57 INFO  [] Register DWLocalHeaderRepository, group name=DWSys, header count=26
+2022/06/10 13:38:57 INFO  [] Register DWLocalHeaderRepository, group name=kbs, header count=4
+2022/06/10 13:38:57 INFO  [] Register DWRestfulHeaderRepository, group name=kbs, header count=4
+2022/06/10 13:38:57 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.IDocRestFulService
+2022/06/10 13:38:57 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.ITagClassificationService
+2022/06/10 13:38:57 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.ITestService
+2022/06/10 13:38:57 INFO  []   |_____com.digiwin.app.kbs.service.mws.restful.IToKmoService
+2022/06/10 13:38:57 INFO  [] Overriding bean definition for bean 'eaiController' with a different definition: replacing [Generic bean: class [com.digiwin.gateway.controller.EaiController]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [jar:file:/E:/kbs/kbs_backend/running/app_backend/platform/lib/dwapiplatform-springboot-4.1.0.1004.jar!/com/digiwin/gateway/controller/EaiController.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=com.digiwin.app.autoconfigure.DWEAIRestfulUrlRegisterAutoConfiguration$BioConfiguration; factoryMethodName=eaiController; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/digiwin/app/autoconfigure/DWEAIRestfulUrlRegisterAutoConfiguration$BioConfiguration.class]]
+2022/06/10 13:38:57 INFO  [] Overriding bean definition for bean 'propertySourcesPlaceholderConfigurer' with a different definition: replacing [Root bean: class [org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/context/PropertyPlaceholderAutoConfiguration.class]] with [Root bean: class [com.digiwin.app.autoconfigurer.DWModularPropertySourceAutoConfiguration]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=propertySourcesPlaceholderConfigurer; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/digiwin/app/autoconfigurer/DWModularPropertySourceAutoConfiguration.class]]
+2022/06/10 13:38:57 INFO  [] No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022/06/10 13:38:57 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWDefaultServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 13:38:57 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWRestfulStandardServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 13:38:57 WARN  [] Cannot enhance @Configuration bean definition 'com.digiwin.app.autoconfigure.DWEAIServiceAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2022/06/10 13:38:58 INFO  [] -DWMobileInitializationEvent-check required property's key->mobileApiInit=
+2022/06/10 13:38:58 INFO  [] No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022/06/10 13:38:58 INFO  [] No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022/06/10 13:38:58 INFO  [] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 13:38:58 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration$$EnhancerBySpringCGLIB$$1744bd8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'dao-LocalValidatorFactoryBean' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$69a2ec42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWDaoAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWDaoAutoConfiguration$$EnhancerBySpringCGLIB$$c20cf4d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'daoMultiTenancyInterceptor' of type [com.digiwin.app.dao.MultiTenancyInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'daoMultiTenancyAdvisor' of type [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'com.digiwin.app.autoconfigure.DWCacheAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWCacheAutoConfiguration$$EnhancerBySpringCGLIB$$1f372da9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'dwCacheKeyGenerator' of type [org.springframework.beans.factory.support.NullBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'org.springframework.cache.jcache.config.ProxyJCacheConfiguration' of type [org.springframework.cache.jcache.config.ProxyJCacheConfiguration$$EnhancerBySpringCGLIB$$8beaaec0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:58 INFO  [] Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$b2b52260] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:59 INFO  [] Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$d494a771] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:38:59 INFO  [] Tomcat initialized with port(s): 8085 (http)
+2022/06/10 13:39:00 INFO  [] Root WebApplicationContext: initialization completed in 5056 ms
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'sidecarProtocalFilter' to urls: [/sidecar/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'characterEncodingFilter' to: [/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'standardHeaderFilter' to urls: [/restful/*, /api/app/tenant/expired/notices, /api/app/tenant/renew/notices, /api/app/initialize, /api/app/tenant/datasource/update]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'requestContextFilter' to: [/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'DWMethodLocateFilter' to urls: [/restful/service/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'DWRestfulMethodLocateFilter' to urls: [/restful/standard/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'eaiHealthCheckFilter' to urls: [/eai]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'DWEaiServiceMethodLocateFilter' to urls: [/eai]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'DWEaiCallbackMethodLocateFilter' to urls: [/eai/callback]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'tokenAllowAnonymousFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'tokenFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'requestStandardizationFilter' to urls: [/restful/service/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'logContextFilter' to urls: [/restful/service/*, /restful/standard/*, /eai, /eai/callback]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'httpTraceFilter' to: [/*]
+2022/06/10 13:39:02 INFO  [] Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2022/06/10 13:39:02 INFO  [] Servlet dispatcherServlet mapped to [/]
+2022/06/10 13:39:02 INFO  [] Mapped "{[/api/app/tenant/datasource/update],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantDataSourceController.updateDataSource() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/api/app/tenant/expired/notices],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantScheduleController.stopSchedule() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/api/app/tenant/renew/notices],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWTenantScheduleController.startSchedule() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/restful/service/**],methods=[GET || POST || PATCH || PUT || DELETE]}" onto public java.lang.Object com.digiwin.gateway.controller.GatewayController.execute() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/restful/standard/**]}" onto public java.lang.Object com.digiwin.gateway.controller.GatewayController.restful() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/api/app/initialize],methods=[POST]}" onto public java.lang.Object com.digiwin.gateway.controller.DWInitializationController.initialize() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022/06/10 13:39:02 INFO  [] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022/06/10 13:39:02 INFO  [] Mapped "{[/eai],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.eai()
+2022/06/10 13:39:02 INFO  [] Mapped "{[/eai/callback],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.callback() throws java.lang.Exception
+2022/06/10 13:39:02 INFO  [] Mapped "{[/eai/syncProd],methods=[POST],produces=[application/json]}" onto public java.lang.Object com.digiwin.gateway.controller.EaiController.syncProd() throws java.lang.Exception
+2022/06/10 13:39:03 INFO  [] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022/06/10 13:39:03 INFO  [] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a9950f1: startup date [Fri Jun 10 13:38:55 CST 2022]; root of context hierarchy
+2022/06/10 13:39:03 INFO  [] Detected @ExceptionHandler methods in exceptionFilter
+2022/06/10 13:39:04 INFO  [] Loading XML bean definitions from InputStream resource [resource loaded through InputStream]
+2022/06/10 13:39:04 INFO  [] Refreshing org.springframework.context.support.GenericXmlApplicationContext@24cbf894: startup date [Fri Jun 10 13:39:04 CST 2022]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a9950f1
+2022/06/10 13:39:04 INFO  [] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 13:39:04 INFO  [] [DWMqttConfiguration] platform.properties:mqttSrvHost:, mqtt enabled=false
+2022/06/10 13:39:04 INFO  [] Initializing ExecutorService  'taskScheduler'
+2022/06/10 13:39:04 INFO  [] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022/06/10 13:39:04 INFO  [] Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2022/06/10 13:39:04 INFO  [] Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2022/06/10 13:39:04 INFO  [] Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022/06/10 13:39:05 INFO  [] Registering beans for JMX exposure on startup
+2022/06/10 13:39:05 INFO  [] Bean with name 'dw-dataSource' has been autodetected for JMX exposure
+2022/06/10 13:39:05 INFO  [] Located MBean 'dw-dataSource': registering with JMX server as MBean [org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource]
+2022/06/10 13:39:05 INFO  [] Starting beans in phase 0
+2022/06/10 13:39:05 INFO  [] Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022/06/10 13:39:05 INFO  [] Channel 'application.errorChannel' has 1 subscriber(s).
+2022/06/10 13:39:05 INFO  [] started _org.springframework.integration.errorLogger
+2022/06/10 13:39:05 INFO  [] Tomcat started on port(s): 8085 (http) with context path ''
+2022/06/10 13:39:05 INFO  [] Started DWApiGatewayApplication in 27.137 seconds (JVM running for 28.92)
+2022/06/10 13:39:09 INFO  [] FrameworkServlet 'dispatcherServlet': initialization started
+2022/06/10 13:39:09 INFO  [] FrameworkServlet 'dispatcherServlet': initialization completed in 43 ms
+2022/06/10 13:39:21 INFO  [dff253b15a8749dd89be548421d9bd3c] Loading XML bean definitions from InputStream resource [resource loaded through InputStream]
+2022/06/10 13:39:21 INFO  [dff253b15a8749dd89be548421d9bd3c] Loading XML bean definitions from class path resource [spring-database.xml]
+2022/06/10 13:39:21 INFO  [dff253b15a8749dd89be548421d9bd3c] Refreshing org.springframework.context.support.GenericXmlApplicationContext@43f22f53: startup date [Fri Jun 10 13:39:21 CST 2022]; parent: org.springframework.context.support.GenericXmlApplicationContext@24cbf894
+2022/06/10 13:39:21 INFO  [dff253b15a8749dd89be548421d9bd3c] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022/06/10 13:39:21 WARN  [dff253b15a8749dd89be548421d9bd3c] No MyBatis mapper was found in '[com.digiwin.app.kbs.service.meta.mysql.kgapp.mapper]' package. Please check your configuration.
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration' of type [com.digiwin.app.autoconfigure.DWModuleValidationAutoConfiguration$$EnhancerBySpringCGLIB$$1744bd8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'dao-LocalValidatorFactoryBean' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'com.digiwin.app.autoconfigure.actuate.DWModuleLayerHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.DWModuleLayerHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$37629913] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$18b074d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'dwModuleDataSourceBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.jdbc.DWModuleLayerDataSourceHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$1e84befc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'dwModuleRabbitTemplateBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.amqp.DWModuleLayerRabbitHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration' of type [com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration$$EnhancerBySpringCGLIB$$621c44cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:22 INFO  [dff253b15a8749dd89be548421d9bd3c] Bean 'dwModuleRedisBeanIndicatorProcessor' of type [com.digiwin.app.autoconfigure.actuate.redis.DWModuleLayerRedisHealthIndicatorConfiguration$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022/06/10 13:39:27 INFO  [dff253b15a8749dd89be548421d9bd3c] Cluster created with settings {hosts=[192.168.8.227:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2022/06/10 13:39:27 INFO  [] Opened connection [connectionId{localValue:1, serverValue:80}] to 192.168.8.227:27017
+2022/06/10 13:39:27 INFO  [] Monitor thread successfully connected to server with description ServerDescription{address=192.168.8.227:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 4, 6]}, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=9600500}
+2022/06/10 13:39:28 INFO  [dff253b15a8749dd89be548421d9bd3c] Method [java.lang.String org.springframework.data.mongodb.core.MongoTemplate.determineCollectionName(java.lang.Class)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2022/06/10 13:39:28 INFO  [dff253b15a8749dd89be548421d9bd3c] Method [java.util.List org.springframework.data.mongodb.core.MongoTemplate.doFind(java.lang.String,org.bson.Document,org.bson.Document,java.lang.Class,java.lang.Class,org.springframework.data.mongodb.core.CursorPreparer)] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+2022/06/10 13:39:29 INFO  [dff253b15a8749dd89be548421d9bd3c] Opened connection [connectionId{localValue:2, serverValue:81}] to 192.168.8.227:27017
+2022/06/10 13:39:29 INFO  [dff253b15a8749dd89be548421d9bd3c] io>invoke[1654839569755]{36}>com.digiwin.app.kbs.service.impl.mws.ToKmoService.knowledgeDetail(messageBody) input: ({
+    "knowledge_info": 
+    {
+        "knowledge_id": "62399cb5483e7f06c9b56736"
+    }
+}
+    )
+2022/06/10 13:41:53 INFO  [dff253b15a8749dd89be548421d9bd3c] io>result[1654839569755]{36}>com.digiwin.app.service.DWServiceResult@57a3796
+2022/06/10 13:41:54 INFO  [] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a9950f1: startup date [Fri Jun 10 13:38:55 CST 2022]; root of context hierarchy
+2022/06/10 13:41:54 INFO  [] Stopping beans in phase 0
+2022/06/10 13:41:54 INFO  [] Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022/06/10 13:41:54 INFO  [] Channel 'application.errorChannel' has 0 subscriber(s).
+2022/06/10 13:41:54 INFO  [] stopped _org.springframework.integration.errorLogger
+2022/06/10 13:41:54 INFO  [] Shutting down ExecutorService 'taskScheduler'
+2022/06/10 13:41:54 INFO  [] Unregistering JMX-exposed beans on shutdown
+2022/06/10 13:41:54 INFO  [] Unregistering JMX-exposed beans
+2022/06/10 13:41:54 WARN  [] Failed to unregister the JMX name: org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource
+javax.management.InstanceNotFoundException: org.apache.commons.dbcp2:name=dw-dataSource,type=BasicDataSource
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1095) ~[?:1.8.0_131]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.exclusiveUnregisterMBean(DefaultMBeanServerInterceptor.java:427) ~[?:1.8.0_131]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.unregisterMBean(DefaultMBeanServerInterceptor.java:415) ~[?:1.8.0_131]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.unregisterMBean(JmxMBeanServer.java:546) ~[?:1.8.0_131]
+	at org.apache.commons.dbcp2.BasicDataSource.close(BasicDataSource.java:1941) [commons-dbcp2-2.2.0.jar:2.2.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:577) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:549) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964) [spring-beans-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937) [spring-context-5.0.5.RELEASE.jar:5.0.5.RELEASE]

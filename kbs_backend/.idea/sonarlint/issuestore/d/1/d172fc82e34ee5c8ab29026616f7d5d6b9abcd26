@@ -1,0 +1,69 @@
+
+n
+java:S3776 "RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ÀğÅÊÿÿÿÿÿ
+}
+java:S1488Y"bImmediately return this expression instead of assigning it to the temporary variable "resultList".(Åöş“ÿÿÿÿÿ
+d
+java:S1192G"NDefine a constant instead of duplicating this literal "manage_status" 6 times.(©è£â
+a
+java:S1192J"KDefine a constant instead of duplicating this literal "start_time" 5 times.(Òòù¬
+p
+java:S1192"TDefine a constant instead of duplicating this literal "tag_classifications" 4 times.(±Ÿ»ûÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(ıÙî’
+C
+java:S1612µ",Replace this lambda with a method reference.(¦çÚó
+H
+java:S1612",Replace this lambda with a method reference.(±Ÿ»ûÿÿÿÿ
+o
+java:S1602Â"SRemove useless curly braces around statement and then remove useless return keyword(±Ÿ»ûÿÿÿÿ
+j
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(…† 
+_
+java:S1192J"IDefine a constant instead of duplicating this literal "end_time" 5 times.(Òòù¬
+a	java:S112Ş"FDefine and throw a dedicated exception instead of using a generic one.(×Ø¸Ïüÿÿÿÿ
+b
+java:S2259«"FA "NullPointerException" could be thrown; "dbTagDoc" is nullable here.(€³¡•ıÿÿÿÿ
+a	java:S112ö"FDefine and throw a dedicated exception instead of using a generic one.(·¾Ùıÿÿÿÿ
+G
+java:S1874=",Remove this use of "Sort"; it is deprecated.(˜¯³ıÿÿÿÿ
+n
+java:S1192e"XDefine a constant instead of duplicating this literal "tag_classification_name" 5 times.(»éè
+o
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(±Ÿ»ûÿÿÿÿ
+b
+java:S2259Á"FA "NullPointerException" could be thrown; "dbTagDoc" is nullable here.(€³¡•ıÿÿÿÿ
+o
+java:S1602Ñ"SRemove useless curly braces around statement and then remove useless return keyword(±Ÿ»ûÿÿÿÿ
+k
+java:S1192U"PDefine a constant instead of duplicating this literal "tag_description" 3 times.(Ë¡Îÿÿÿÿÿ
+H
+java:S1612ç",Replace this lambda with a method reference.(‡Õóàûÿÿÿÿ
+B
+java:S1612^",Replace this lambda with a method reference.(ØÉü¼
+R	java:S125¹"<This block of commented-out lines of code should be removed.(ôšÑÿ
+C
+java:S1612",Replace this lambda with a method reference.(…† 
+l
+java:S1192D"VDefine a constant instead of duplicating this literal "tag_classification_id" 7 times.(‹¢ £
+H
+java:S1612Ñ",Replace this lambda with a method reference.(±Ÿ»ûÿÿÿÿ
+]
+java:S2259"FA "NullPointerException" could be thrown; "dbTagDoc" is nullable here.(…† 
+x
+java:S1488·"\Immediately return this expression instead of assigning it to the temporary variable "list".(ñ¹÷²ùÿÿÿÿ
+i
+java:S1602^"SRemove useless curly braces around statement and then remove useless return keyword(ØÉü¼
+]
+java:S2259Û"FA "NullPointerException" could be thrown; "dbTagDoc" is nullable here.(ÍÎ×
+H
+java:S1612Â",Replace this lambda with a method reference.(±Ÿ»ûÿÿÿÿ
+_
+java:S1192"HDefine a constant instead of duplicating this literal "tag_ids" 7 times.(å¨ô
+g
+java:S1192="LDefine a constant instead of duplicating this literal "create_time" 4 times.(˜¯³ıÿÿÿÿ
+H
+java:S1612®",Replace this lambda with a method reference.(¶© Šûÿÿÿÿ
+d
+java:S1192U"IDefine a constant instead of duplicating this literal "tag_name" 4 times.(Ë¡Îÿÿÿÿÿ
+\
+java:S1126y"AReplace this if-then-else statement by a single return statement.(ïó¯ûÿÿÿÿ

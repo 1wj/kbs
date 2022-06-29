@@ -1,0 +1,80 @@
+
+i
+java:S2095ö"RUse try-with-resources or close this "BufferedOutputStream" in a "finally" clause.(Òı±
+J
+java:S3740|"/Provide the parametrized type for this generic.(·ÑÀüÿÿÿÿ
+K
+java:S3740‘"/Provide the parametrized type for this generic.(·ÑÀüÿÿÿÿ
+K
+java:S3740¯"/Provide the parametrized type for this generic.(·ÑÀüÿÿÿÿ
+_
+java:S1192"HDefine a constant instead of duplicating this literal "success" 3 times.(ÿ‹²€
+x
+java:S2629Ù"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(ĞóÌáıÿÿÿÿ
+\	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÅÅÍÊ
+a	java:S112®"FDefine and throw a dedicated exception instead of using a generic one.(ëß£ûÿÿÿÿ
+a	java:S112Ë"FDefine and throw a dedicated exception instead of using a generic one.(—í‰ùÿÿÿÿ
+a	java:S112İ"FDefine and throw a dedicated exception instead of using a generic one.(–ù¾›øÿÿÿÿ
+A
+java:S5411"*Use the primitive boolean expression here.(ÿ‹²€
+A
+java:S5411Ÿ"*Use the primitive boolean expression here.(”³à’
+x
+java:S1488L"]Immediately return this expression instead of assigning it to the temporary variable "bytes".(²ÿñ­úÿÿÿÿ
+s
+java:S1488Y"]Immediately return this expression instead of assigning it to the temporary variable "bytes".(ÌŸ×÷
+s
+java:S1488e"]Immediately return this expression instead of assigning it to the temporary variable "bytes".(üÕÇ
+x
+java:S1488q"]Immediately return this expression instead of assigning it to the temporary variable "bytes".(‚”Ÿîøÿÿÿÿ
+t
+java:S1488î"]Immediately return this expression instead of assigning it to the temporary variable "bytes".(ÌŸ×÷
+T
+java:S1128"9Remove this unused import 'cn.hutool.core.date.DateUtil'.(‹œ‰Áıÿÿÿÿ
+O
+java:S1128)"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ
+g
+java:S1128	"LRemove this unused import 'com.digiwin.app.kbs.service.util.doucment.Login'.(ñ­¤¨ıÿÿÿÿ
+X
+java:S1128!"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…
+l
+java:S1128
+"QRemove this unused import 'com.digiwin.app.kbs.service.util.doucment.UploadUtil'.(¬¤Ğºşÿÿÿÿ
+V
+java:S1128";Remove this unused import 'com.digiwin.app.service.DWFile'.(ŞÃŸÏşÿÿÿÿ
+c
+java:S1128"HRemove this unused import 'org.springframework.web.client.RestTemplate'.(Îö¼Şûÿÿÿÿ
+W
+java:S1128"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ
+m
+java:S1128"WRemove this unused import 'com.digiwin.dmc.sdk.service.upload.UploadProgressEventArgs'.(×¼±¾
+Y
+java:S1128""CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë
+S
+java:S1128,"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ
+P
+java:S1128*":Remove this unused import 'java.time.temporal.ChronoUnit'.(Á…§
+X
+java:S1128"BRemove this unused import 'cn.hutool.core.date.LocalDateTimeUtil'.(¸³Ä
+n
+java:S1128"XRemove this unused import 'com.digiwin.dmc.sdk.service.upload.IGeneralDocumentUploader'.(³û¨Œ
+Y
+java:S1128"CRemove this unused import 'com.google.gson.internal.LinkedTreeMap'.(‡½ç›
+l
+java:S1128"VRemove this unused import 'com.digiwin.app.kbs.service.util.doucment.GlobalConstants'.(ˆ÷¿ˆ
+x
+java:S4144ì"\Update this method so that its implementation is not identical to "downloadFile" on line 87.(ı¥®Éøÿÿÿÿ
+’
+java:S1845¿"vRename method "getcontentType" to prevent any misunderstanding/clash with method "getContentType" defined on line 294.(Û¶ûÀøÿÿÿÿ
+U
+java:S11185":Add a private constructor to hide the implicit public one.(° ³œøÿÿÿÿ
+@
+java:S1125¡")Remove the literal "false" boolean value.(ÍäÈ
+X
+java:S1126À"AReplace this if-then-else statement by a single return statement.(‹™¢”
+]
+java:S3457Ù"AFormat specifiers should be used instead of string concatenation.(ĞóÌáıÿÿÿÿ
+n
+java:S3776¿"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Û¶ûÀøÿÿÿÿ
+R
+java:S10687"7Remove this unused "EMPTY_OBJECT_ID_STR" private field.(ØÛàşÿÿÿÿ

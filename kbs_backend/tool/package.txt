@@ -1,0 +1,64 @@
+﻿#prepare package
+\rm -rf ./package
+mkdir ./package
+
+
+#download app_backend
+cd package
+#nexus 3
+wget -nv 'https://repo.digiwincloud.com.cn/maven/service/rest/v1/search/assets/download?repository=releases&group=com.digiwin&name=dwapiplatform-appbackend&maven.extension=war&version='${apiVersion} -O  app_backend.war
+#nexus 2
+#wget -nv 'http://nexus.digiwincloud.com.cn:22699/service/local/artifact/maven/redirect?r=releases&g=com.digiwin&a=dwapiplatform-appbackend&e=war&v='${apiVersion} -O  app_backend.war
+tar xvf app_backend.war
+mv app_backend ${folderName}
+\rm -f app_backend.war
+cd ..
+
+#ThirdParty lib copy to develop/lib
+if [ -d ./${folderName}/develop/DWThirdPartyLibrary/target/dependency ]; then
+\cp -rf ./${folderName}/develop/DWThirdPartyLibrary/target/dependency/* ./package/${folderName}/application/lib/
+fi
+
+#application
+\cp -rf ./${folderName}/develop/conf/* ./package/${folderName}/application/conf/
+\cp -rf ./${folderName}/develop/lang/* ./package/${folderName}/application/lang/
+\cp -rf ./${folderName}/develop/lib/* ./package/${folderName}/application/lib/
+
+#Basic
+cp -r ./${folderName}/develop/module/Basic/target/Basic ./package/${folderName}/application/module/
+#dem
+cp -r ./${folderName}/develop/module/dem/target/dem ./package/${folderName}/application/module/
+#DEMO_DAP_CURRENT
+cp -r ./${folderName}/develop/module/DEMO_DAP_CURRENT/target/DEMO_DAP_CURRENT ./package/${folderName}/application/module/
+
+#remove Dockerfile from DPY_home
+\rm -f /ms/DPY_home/jenkinsBuild/DAP/Dockerfile/dwapigateway/Dockerfile
+
+#replace Dockerfile argument
+sed -i s#@folderName@#"${folderName}"#g ./package/${folderName}/platform/bin/docker/Dockerfile
+
+#Jar檔加密，要打開以下註解，10.40.41.220:8081為公司內，nexus.digiwincloud.com.cn:22699為阿里雲，以下兩行二擇一
+#wget -nv 'http://10.40.41.220:8081/nexus/service/local/artifact/maven/redirect?r=releases&g=com.digiwin&a=dwapiplatform-jartool&e=jar&v=2.0.0.0' -O dwapiplatform-jartool-2.0.0.0.jar
+#wget -nv 'http://nexus.digiwincloud.com.cn:22699/service/local/artifact/maven/redirect?r=releases&g=com.digiwin&a=dwapiplatform-jartool&e=jar&v=2.0.0.0' -O dwapiplatform-jartool-2.0.0.0.jar
+#chmod +x dwapiplatform-jartool-2.0.0.0.jar
+#java -jar dwapiplatform-jartool-2.0.0.0.jar --foldername=${WORKSPACE}/package/${folderName} --password=${classPassword}
+#cd ${WORKSPACE}
+
+#move Dockerfile to DPY_home
+mv ./package/${folderName}/platform/bin/docker/Dockerfile /ms/DPY_home/jenkinsBuild/DAP/Dockerfile/dwapigateway/
+
+# package tar
+cd package
+tar -cf ${folderName}.tar ${folderName}/
+cd ..
+
+#remove tar from DPY_home
+rm -rf /ms/DPY_home/jenkinsBuild/DAP/Dockerfile/dwapigateway/${folderName}.tar
+
+#move tar to DPY_home
+mv ./package/${folderName}.tar /ms/DPY_home/jenkinsBuild/DAP/Dockerfile/dwapigateway/${folderName}.tar
+
+#產生Docker image
+cd /ms
+java -jar DockerBuild.jar -e dwapigateway -n dwapigateway -t platform -pv -dp /ms/DPY_home/jenkinsBuild/DAP/Dockerfile/dwapigateway/ -tp /ms/DPY_home/jenkinsBuild/DAP/Tar/GitRelease/Build/ -ri dwapigateway
+

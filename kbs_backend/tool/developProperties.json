@@ -1,0 +1,292 @@
+{
+  "env": [
+    {
+      "appId": ""
+    },
+    {
+      "serverPort": "8085"
+    },
+    {
+      "hybridCloudSaasUrl": ""
+    },
+    {
+      "jvmArgs": "-Xms6144m@space@-Xmx6144m"
+    },
+    {
+      "iamUrl": ""
+    },
+    {
+      "iamApToken": ""
+    },
+    {
+      "dmcUrl": ""
+    },
+    {
+      "dmcPwd": ""
+    },
+    {
+      "dmcBucketName": ""
+    },
+    {
+      "eaiUrl": ""
+    },
+    {
+      "eaiHostProdIsStandardProduct": ""
+    },
+    {
+      "dbEnabled": "false"
+    },
+    {
+      "dbUrl": ""
+    },
+    {
+      "dbUsername": ""
+    },
+    {
+      "dbPassword": ""
+    },
+    {
+      "scheduleEnabled": "false"
+    },
+    {
+      "scheduleEmailUsername": ""
+    },
+    {
+      "scheduleEmailPassword": ""
+    },
+    {
+      "scheduleEmailPort": ""
+    },
+    {
+      "scheduleEmailSmtpHost": ""
+    },
+    {
+      "tenantEnabled": "false"
+    },
+    {
+      "tenantColumnname": "tenantsid"
+    },
+    {
+      "frUrl": ""
+    },
+    {
+      "mqttSrvHost": ""
+    },
+    {
+      "mqttSrvUsername": ""
+    },
+    {
+      "mqttSrvPassword": ""
+    },
+    {
+      "mqttSrvClientId": "superman999"
+    },
+    {
+      "mqttSrvCleanSession": "false"
+    },
+    {
+      "mqttSrvReconnect": "false"
+    },
+    {
+      "mqttTopicQos": "1"
+    },
+    {
+      "mqttTopicRetained": "true"
+    },
+    {
+      "mqttSrvConnectTimeout": "5000"
+    },
+    {
+      "mqttWaitForCompletion": "10000"
+    },
+    {
+      "logLevel": "INFO"
+    },
+    {
+      "logFileReservedDay": "7d"
+    },
+    {
+      "iamSoTimeout": "30000"
+    },
+    {
+      "iamHttpConnectionPoolRequestTimeout": "20000"
+    },
+    {
+      "iamHttpConnectionTimeout": "60000"
+    },
+    {
+      "iamHttpMaxConnections": "200"
+    },
+    {
+      "iamKeepAliveTimeout": "-1"
+    },
+    {
+      "queueEnabled": "false"
+    },
+    {
+      "queueHeartbeat": "true"
+    },
+    {
+      "queueHeartbeatRate": "5"
+    },
+    {
+      "queueRabbitmqHost": "xx.xx.xx.xx"
+    },
+    {
+      "queueRabbitmqUsername": "xxx"
+    },
+    {
+      "queueRabbitmqPassword": "xxx"
+    },
+    {
+      "queueRabbitmqHandshakeTimeout": "10"
+    },
+    {
+      "queueRabbitmqTcpConnectionTimeout": "60"
+    },
+    {
+      "queueRabbitmqHeartbeat": "10"
+    },
+    {
+      "eaiHostRetrytimes": "3"
+    },
+    {
+      "eaiHostRetryinterval": "3000"
+    },
+    {
+      "eaiHostVer": "1.0.0"
+    },
+    {
+      "eaiHostConcurrence": "50"
+    },
+    {
+      "jdbcDriverClassName": "org.mariadb.jdbc.Driver"
+    },
+    {
+      "dbConnectionMaxWaitMillis": "60000"
+    },
+    {
+      "dbConnectionInitialSize": "3"
+    },
+    {
+      "dbConnectionMaxTotal": "20"
+    },
+    {
+      "dbConnectionMinIdle": "3"
+    },
+    {
+      "httpRequestFilters": "RestfulService,RestfulStandard,EAI"
+    },
+    {
+      "serverHttpControllerIo": "bio"
+    },
+    {
+      "serverAsyncTimeout": "120000"
+    },
+    {
+      "serverTomcatAcceptCount": "1500"
+    },
+    {
+      "serverTomcatMaxConnections": "10000"
+    },
+    {
+      "serverTomcatMinSpareThreads": "64"
+    },
+    {
+      "serverTomcatMaxThreads": "1500"
+    },
+    {
+      "serverHttpTokenmode": "IAM"
+    },
+    {
+      "accessControlMaxAge": "86400"
+    },
+    {
+      "server.max-http-header-size": "10000"
+    },
+    {
+      "spring.redis.database": "1"
+    },
+    {
+      "spring.redis.host": ""
+    },
+    {
+      "spring.redis.port": ""
+    },
+    {
+      "spring.redis.password": ""
+    },
+    {
+      "spring.redis.pool.max-active": "1024"
+    },
+    {
+      "spring.redis.pool.max-wait": "10"
+    },
+    {
+      "spring.redis.pool.max-idle": "20"
+    },
+    {
+      "spring.redis.pool.min-idle": "10"
+    },
+    {
+      "spring.redis.timeout": "30000"
+    },
+    {
+      "keyExpiredTime": "30000"
+    },
+    {
+      "k8sProxyUrl": ""
+    },
+    {
+      "k8sProxyHttpConnectionPoolRequestTimeout": ""
+    },
+    {
+      "k8sProxyHttpMaxConnections": ""
+    },
+    {
+      "k8sProxyHttpConnectionTimeout": ""
+    },
+    {
+      "k8sProxySoTimeout": ""
+    },
+    {
+      "org.quartz.jobStore.misfireThreshold": "60000"
+    },
+    {
+      "org.quartz.dataSource.quartzDataSource.maxPoolSize": "50"
+    },
+    {
+      "org.quartz.dataSource.quartzDataSource.idleConnectionTestPeriod": "300"
+    },
+    {
+      "org.quartz.dataSource.quartzDataSource.maxIdleTimeExcessConnections": "240"
+    },
+    {
+      "org.quartz.threadPool.threadCount": "50"
+    },
+    {
+      "org.quartz.dataSource.quartzDataSource.acquireIncrement": "5"
+    },
+    {
+      "org.quartz.threadPool.threadPriority": "5"
+    },
+    {
+      "org.quartz.dataSource.quartzDataSource.minPoolSize": "5"
+    },
+    {
+      "org.quartz.jobStore.clusterCheckinInterval": "20000"
+    },
+    {
+      "serverTokenExpiredTime": "60000"
+    },
+    {
+      "mobileUrl": ""
+    },
+    {
+      "mobileApiInit": ""
+    },
+    {
+      "cacUrl": ""
+    }
+  ]
+}

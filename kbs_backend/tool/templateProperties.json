@@ -1,0 +1,393 @@
+{
+  "env": [
+    {
+      "group": "base",
+      "description": "基礎參數",
+      "props": [
+        {
+          "appId": "@appId@",
+          "description": "APP ID"
+        },
+        {
+          "serverPort": "@serverPort@",
+          "description": "服務器port(建議值為8085)",
+          "defaultValue": "8085"
+        },
+        {
+          "hybridCloudSaasUrl": "@hybridCloudSaasUrl@",
+          "description": "雲端服務器url(地調雲服務時需配置)"
+        },
+        {
+          "jvmArgs": "-Xms6144m@space@-Xmx6144m",
+          "description": "jvm內存大小配置"
+        }
+      ]
+    },
+    {
+      "group": "iam",
+      "description": "應用互聯中心(IAM)參數",
+      "props": [
+        {
+          "iamUrl": "@IAM_URL@",
+          "description": "IAM服務器位址(例如:http://192.168.9.27:32511)"
+        },
+        {
+          "iamApToken": "@iamApToken@",
+          "description": "IAM AP Token"
+        }
+      ]
+    },
+    {
+      "group": "dmc",
+      "description": "DMC參數",
+      "props": [
+        {
+          "dmcUrl": "@DMC_URL@",
+          "description": "DMC服務器位址(例如:http://10.40.46.13:22611)"
+        },
+        {
+          "dmcPwd": "@dmcPwd@",
+          "description": "DMC密碼"
+        },
+        {
+          "dmcBucketName": "@dmcBucketName@",
+          "description": "DMC庫名"
+        }
+      ]
+    },
+    {
+      "group": "eai",
+      "description": "EAI參數",
+      "props": [
+        {
+          "eaiUrl": "@eaiUrl@",
+          "description": "EAI服務器位置"
+        },
+        {
+          "eaiHostProdIsStandardProduct": "@eaiHostProdIsStandardProduct@",
+          "description": "與EAI集成，是否為公司正式產品(例:true, false)"
+        }
+      ]
+    },
+    {
+      "group": "db",
+      "description": "數據庫連線參數",
+      "props": [
+        {
+          "dbEnabled": "true"
+        },
+        {
+          "dbUrl": "@dbUrl@",
+          "description": "數據庫服務器位置(例:jdbc:mariadb://xxx.xxx.xxx.xxx:3306/schema)"
+        },
+        {
+          "dbUsername": "@dbUsername@",
+          "description": "數據庫帳號"
+        },
+        {
+          "dbPassword": "@dbPassword@",
+          "description": "數據庫密碼"
+        }
+      ]
+    },
+    {
+      "group": "schedule",
+      "description": "排程參數",
+      "props": [
+        {
+          "scheduleEnabled": "false"
+        },
+        {
+          "scheduleEmailUsername": "@scheduleEmailUsername@",
+          "description": "排程功能寄信通知郵件帳號"
+        },
+        {
+          "scheduleEmailPassword": "@scheduleEmailPassword@",
+          "description": "排程功能寄信通知郵件密碼"
+        },
+        {
+          "scheduleEmailPort": "@scheduleEmailPort@",
+          "description": "排程功能寄信通知郵件伺服器port"
+        },
+        {
+          "scheduleEmailSmtpHost": "@scheduleEmailSmtpHost@",
+          "description": "排程功能寄信通知郵件伺服器url"
+        }
+      ]
+    },
+    {
+      "group": "tenant",
+      "description": "多租戶參數",
+      "props": [
+        {
+          "tenantEnabled": "true"
+        },
+        {
+          "tenantColumnname": "@tenantColumnname@",
+          "description": "租戶字段名稱",
+          "defaultValue": "tenantsid"
+        }
+      ]
+    },
+    {
+      "group": "finereport",
+      "description": "Fine Report參數",
+      "props": [
+        {
+          "frUrl": "@FR_URL@",
+          "description": "Fine report服務器位址(例如:http://10.40.42.51:9090)"
+        }
+      ]
+    },
+    {
+      "group": "mqtt",
+      "description": "MQTT參數",
+      "props": [
+        {
+          "mqttSrvHost": "@mqttSrvHost@",
+          "description": "Mqtt 系統網址",
+          "defaultValue": ""
+        },
+        {
+          "mqttSrvUsername": "@mqttSrvUsername@",
+          "description": "Mqtt 系統連線用戶名稱",
+          "defaultValue": ""
+        },
+        {
+          "mqttSrvPassword": "@mqttSrvPassword@",
+          "description": "Mqtt 系統連線用戶密碼",
+          "defaultValue": ""
+        },
+        {
+          "mqttSrvClientId": "@mqttSrvClientId@",
+          "description": "客戶端id",
+          "defaultValue": "superman999"
+        },
+        {
+          "mqttSrvCleanSession": "@mqttSrvCleanSession@",
+          "description": "清除舊連線",
+          "defaultValue": "false"
+        },
+        {
+          "mqttSrvReconnect": "@mqttSrvReconnect@",
+          "description": "重新連線",
+          "defaultValue": "false"
+        },
+        {
+          "mqttTopicQos": "@mqttTopicQos@",
+          "description": "訂閱主題Qos",
+          "defaultValue": "1"
+        },
+        {
+          "mqttTopicRetained": "@mqttTopicRetained@",
+          "description": "發送主題保留訊息",
+          "defaultValue": "true"
+        },
+        {
+          "mqttSrvConnectTimeout": "@mqttSrvConnectTimeout@",
+          "description": "連線mqtt系統的逾時(ms)",
+          "defaultValue": "5000"
+        },
+        {
+          "mqttWaitForCompletion": "@mqttWaitForCompletion@",
+          "description": "訊息回應等待的逾時(ms)",
+          "defaultValue": "10000"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "props": [
+        {
+          "logLevel": "INFO"
+        },
+        {
+          "logFileReservedDay": "7d"
+        },
+        {
+          "iamSoTimeout": "30000"
+        },
+        {
+          "iamHttpConnectionPoolRequestTimeout": "20000"
+        },
+        {
+          "iamHttpConnectionTimeout": "60000"
+        },
+        {
+          "iamHttpMaxConnections": "200"
+        },
+        {
+          "iamKeepAliveTimeout": "-1"
+        },
+        {
+          "queueEnabled": "false"
+        },
+        {
+          "queueHeartbeat": "true"
+        },
+        {
+          "queueHeartbeatRate": "5"
+        },
+        {
+          "queueRabbitmqHost": "xx.xx.xx.xx"
+        },
+        {
+          "queueRabbitmqUsername": "xxx"
+        },
+        {
+          "queueRabbitmqPassword": "xxx"
+        },
+        {
+          "queueRabbitmqHandshakeTimeout": "10"
+        },
+        {
+          "queueRabbitmqTcpConnectionTimeout": "60"
+        },
+        {
+          "queueRabbitmqHeartbeat": "10"
+        },
+        {
+          "eaiHostRetrytimes": "3"
+        },
+        {
+          "eaiHostRetryinterval": "3000"
+        },
+        {
+          "eaiHostVer": "1.0.0"
+        },
+        {
+          "eaiHostConcurrence": "50"
+        },
+        {
+          "jdbcDriverClassName": "org.mariadb.jdbc.Driver"
+        },
+        {
+          "dbConnectionMaxWaitMillis": "60000"
+        },
+        {
+          "dbConnectionInitialSize": "3"
+        },
+        {
+          "dbConnectionMaxTotal": "20"
+        },
+        {
+          "dbConnectionMinIdle": "3"
+        },
+        {
+          "httpRequestFilters": "RestfulService,RestfulStandard,EAI"
+        },
+        {
+          "serverHttpControllerIo": "bio"
+        },
+        {
+          "serverAsyncTimeout": "120000"
+        },
+        {
+          "serverTomcatAcceptCount": "1500"
+        },
+        {
+          "serverTomcatMaxConnections": "10000"
+        },
+        {
+          "serverTomcatMinSpareThreads": "64"
+        },
+        {
+          "serverTomcatMaxThreads": "1500"
+        },
+        {
+          "serverHttpTokenmode": "IAM"
+        },
+        {
+          "accessControlMaxAge": "86400"
+        },
+        {
+          "server.max-http-header-size": "10000"
+        },
+        {
+          "spring.redis.database": "1"
+        },
+        {
+          "spring.redis.host": ""
+        },
+        {
+          "spring.redis.port": ""
+        },
+        {
+          "spring.redis.password": ""
+        },
+        {
+          "spring.redis.pool.max-active": "1024"
+        },
+        {
+          "spring.redis.pool.max-wait": "10"
+        },
+        {
+          "spring.redis.pool.max-idle": "20"
+        },
+        {
+          "spring.redis.pool.min-idle": "10"
+        },
+        {
+          "spring.redis.timeout": "30000"
+        },
+        {
+          "keyExpiredTime": "30000"
+        },
+        {
+          "k8sProxyUrl": ""
+        },
+        {
+          "k8sProxyHttpConnectionPoolRequestTimeout": ""
+        },
+        {
+          "k8sProxyHttpMaxConnections": ""
+        },
+        {
+          "k8sProxyHttpConnectionTimeout": ""
+        },
+        {
+          "k8sProxySoTimeout": ""
+        },
+        {
+          "org.quartz.jobStore.misfireThreshold": "60000"
+        },
+        {
+          "org.quartz.dataSource.quartzDataSource.maxPoolSize": "50"
+        },
+        {
+          "org.quartz.dataSource.quartzDataSource.idleConnectionTestPeriod": "300"
+        },
+        {
+          "org.quartz.dataSource.quartzDataSource.maxIdleTimeExcessConnections": "240"
+        },
+        {
+          "org.quartz.threadPool.threadCount": "50"
+        },
+        {
+          "org.quartz.dataSource.quartzDataSource.acquireIncrement": "5"
+        },
+        {
+          "org.quartz.threadPool.threadPriority": "5"
+        },
+        {
+          "org.quartz.dataSource.quartzDataSource.minPoolSize": "5"
+        },
+        {
+          "org.quartz.jobStore.clusterCheckinInterval": "20000"
+        },
+        {
+          "serverTokenExpiredTime": "60000"
+        },
+        {
+          "mobileUrl": ""
+        },
+        {
+          "mobileApiInit": ""
+        },
+        {
+          "cacUrl": ""
+        }
+      ]
+    }
+  ]
+}

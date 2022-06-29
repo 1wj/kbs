@@ -1,0 +1,21 @@
+
+u
+java:S1192²"^Define a constant instead of duplicating this literal "knowledge_classification_info" 5 times.(¥…œõ
+R
+java:S1128"<Remove this unused import 'com.alibaba.fastjson.JSONObject'.(äýµ
+i
+java:S1192."TDefine a constant instead of duplicating this literal "knowledge_base_info" 7 times.(”êŠa
+V
+java:S1128";Remove this unused import 'com.alibaba.fastjson.JSONArray'.(ÿÀâ³ùÿÿÿÿ
+K
+java:S3740‹"/Provide the parametrized type for this generic.(©õ·£úÿÿÿÿ
+J
+java:S3740t"/Provide the parametrized type for this generic.(Ó¯ß”üÿÿÿÿ
+J
+java:S3740["/Provide the parametrized type for this generic.(˜ˆððüÿÿÿÿ
+K
+java:S3740ï"/Provide the parametrized type for this generic.(ÇíÜÕûÿÿÿÿ
+F
+java:S3740ß"/Provide the parametrized type for this generic.(ÆÒ—®
+`
+java:S1192:"JDefine a constant instead of duplicating this literal "success!" 10 times.(Î¤Û

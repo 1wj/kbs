@@ -1,0 +1,52 @@
+
+Q
+java:S1444"/Make this "public static statusMap" field final(ûµäøıÿÿÿÿ8°Øê0
+U
+java:S3972Ö"7Move this "if" to a new line or add the missing "else".(ôĞÍø8ÌÛŒ¡0
+j
+java:S1192ÿ"GDefine a constant instead of duplicating this literal "value" 10 times.(†ºÒıüÿÿÿÿ8×ö–†0
+t
+java:S11921"RDefine a constant instead of duplicating this literal "expect_solve_date" 9 times.(ğšıÿÿÿÿ8…ÏÈ°0
+w
+java:S1104"UMake statusMap a static final constant or non-public and provide accessors if needed.(ûµäøıÿÿÿÿ8°Øê0
+p
+java:S11920"SDefine a constant instead of duplicating this literal "é™„ä»¶ä¸Šä¼ æ ‡å¿—" 8 times.(€ÿÒ§8…ÏÈ°0
+k
+java:S11923"NDefine a constant instead of duplicating this literal "process_date" 12 times.(ÉŒàÒ8…ÏÈ°0
+q
+java:S11920"TDefine a constant instead of duplicating this literal "é¢„è®¡å®Œæˆæ—¶é—´" 11 times.(€ÿÒ§8…ÏÈ°0
+y
+java:S11921"WDefine a constant instead of duplicating this literal "attachment_upload_flag" 8 times.(ğšıÿÿÿÿ8…ÏÈ°0
+w
+java:S1192ß"TDefine a constant instead of duplicating this literal "process_person_name" 3 times.(ÜĞ÷»üÿÿÿÿ8Í¾œ†0
+?
+java:S2386"Make this member "protected".(ûµäøıÿÿÿÿ8°Øê0
+S
+java:S1444"6Make this "public static processStatusMap" field final(…îÿ©8—©‰¡0
+h	java:S112À"FDefine and throw a dedicated exception instead of using a generic one.(Òòƒ€øÿÿÿÿ8×ö–†0
+v
+java:S11921"TDefine a constant instead of duplicating this literal "liable_person_name" 21 times.(ğšıÿÿÿÿ8…ÏÈ°0
+:
+java:S2386"Make this member "protected".(…îÿ©8—©‰¡0
+l
+java:S11921"JDefine a constant instead of duplicating this literal "step_name" 3 times.(ğšıÿÿÿÿ8Ê«’Ï0
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ûµäøıÿÿÿÿ8°Øê0
+y
+java:S1104"\Make processStatusMap a static final constant or non-public and provide accessors if needed.(…îÿ©8—©‰¡0
+p
+java:S1192E"NDefine a constant instead of duplicating this literal "verify_status" 5 times.(ÏüÁçûÿÿÿÿ8…ÏÈ°0
+u
+java:S1192C"SDefine a constant instead of duplicating this literal "å®é™…å®Œæˆæ—¶é—´" 4 times.(¼Úº“øÿÿÿÿ8Ê«’Ï0
+s	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÿÉ¯øÿÿÿÿ8Í¾œ†0
+c	java:S112Ã"FDefine and throw a dedicated exception instead of using a generic one.(¿‹©8×ö–†0
+m
+java:S1192;"PDefine a constant instead of duplicating this literal "measure_content" 4 times.(ù©“ğ8Ê«’Ï0
+n
+java:S1192E"LDefine a constant instead of duplicating this literal "verify_date" 6 times.(ÏüÁçûÿÿÿÿ8…ÏÈ°0
+q
+java:S1192E"ODefine a constant instead of duplicating this literal "execute_status" 3 times.(ÏüÁçûÿÿÿÿ8Ê«’Ï0
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(…îÿ©8—©‰¡0
+t
+java:S1192E"RDefine a constant instead of duplicating this literal "verify_illustrate" 6 times.(ÏüÁçûÿÿÿÿ8…ÏÈ°0
